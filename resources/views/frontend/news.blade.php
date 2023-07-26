@@ -36,7 +36,7 @@
 								<div class="itemContainer">
 									<div class="itemHeader">
 										<h3 class="itemTitle">
-											<a href="new.html" title="Enthusiastically">News Title </a>
+											<a href="{{ url ('/new') }}" title="Enthusiastically">News Title </a>
 										</h3>
 
 										<div class="post_details">
