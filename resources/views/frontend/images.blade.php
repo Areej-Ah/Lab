@@ -1,56 +1,164 @@
-@extends('frontend.index')
-
+@extends('frontend.index2')
+@section('page_name','our gallery')
 @section('content')
 
-<section class="no-padding one-half-screen position-relative">
-    <div class="opacity-full bg-gradient-fast-blue-purple z-index-0"></div>
-    <div class="container h-100">
-        <div class="row align-items-end justify-content-center h-100">
-            <div class="col-12 col-xl-6 col-lg-7 col-md-10 position-relative page-title-large text-center">
-                <span class="margin-15px-bottom alt-font  text-extra-large text-white d-block">{!! trans('admin.intro') !!}</span>
-                <h1 class="text-white alt-font font-weight-500
-                           margin-5-rem-bottom sm-margin-3-rem-bottom">{!! trans('admin.image_gallery') !!}</h1>
-                <span class="w-1px h-80px d-inline-block bg-white
-                             margin-5-rem-bottom sm-margin-3-rem-bottom sm-h-50px"></span>
-            </div>
-        </div>
-    </div>
-    <video loop="" autoplay="" controls="" muted class="html-video" poster="https://via.placeholder.com/1920x1080">
-        <source type="video/mp4" src="{{ url ('frontend/sadu/video/video.mp4') }}" />
-    </video>
-</section>
+<section class="hg_section ptop-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="row">
+
+							<div class="col-sm-4">
+								<div class="portfolio-item kl-has-overlay">
+									<div class="img-intro">
+										<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+
+										<img src="images/n1.jpg" class="img-responsive" title="Image title" alt="Image title" />
+
+										<div class="overlay">
+											<div class="overlay-inner">
+												<span class="glyphicon glyphicon-picture"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="portfolio-entry">
+										<h3 class="title">
+											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+										</h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4">
+								<div class="portfolio-item kl-has-overlay">
+									<div class="img-intro">
+										<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+
+										<img src="images/n2.jpg" class="img-responsive" title="Image title" alt="Image title" />
+
+										<div class="overlay">
+											<div class="overlay-inner">
+												<span class="glyphicon glyphicon-picture"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="portfolio-entry">
+										<h3 class="title">
+											<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+										</h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4">
+								<div class="portfolio-item kl-has-overlay">
+									<div class="img-intro">
+										<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+
+										<img src="images/n3.jpg" class="img-responsive" title="Image title" alt="Image title" />
+
+										<div class="overlay">
+											<div class="overlay-inner">
+												<span class="glyphicon glyphicon-picture"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="portfolio-entry">
+										<h3 class="title">
+											<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+										</h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="clear">
+							</div>
+
+							<div class="col-sm-4">
+								<div class="portfolio-item kl-has-overlay">
+									<div class="img-intro">
+										<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+
+										<img src="images/n1.jpg" class="img-responsive" title="Image title" alt="Image title" />
+
+										<div class="overlay">
+											<div class="overlay-inner">
+												<span class="glyphicon glyphicon-picture"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="portfolio-entry">
+										<h3 class="title">
+											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+										</h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4">
+								<div class="portfolio-item kl-has-overlay">
+									<div class="img-intro">
+										<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+
+										<img src="images/n2.jpg" class="img-responsive" title="Image title" alt="Image title" />
+
+										<div class="overlay">
+											<div class="overlay-inner">
+												<span class="glyphicon glyphicon-picture"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="portfolio-entry">
+										<h3 class="title">
+											<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+										</h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4">
+								<div class="portfolio-item kl-has-overlay">
+									<div class="img-intro">
+										<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+
+										<img src="images/n3.jpg" class="img-responsive" title="Image title" alt="Image title" />
+
+										<div class="overlay">
+											<div class="overlay-inner">
+												<span class="glyphicon glyphicon-picture"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="portfolio-entry">
+										<h3 class="title">
+											<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+										</h3>
+									</div>
+								</div>
+							</div>
 
 
-<section class="half-section padding-four-lr bg-light-gray lg-padding-two-lr sm-no-padding-lr">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 filter-content">
-                <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
-                    <li class="grid-sizer"></li>
-                    @foreach($images as $image)
-                        <li class="grid-item logos wow animate__fadeIn" data-wow-delay="0.2s">
-                            <div class="portfolio-box border-radius-6px box-shadow-large">
-                                <div class="portfolio-image bg-gradient-fast-blue-purple">
-                                    <img src="{{ Storage::url($image->image) }}" alt="" />
-                                    <div class="portfolio-hover align-items-center justify-content-center d-flex h-100">
-                                        <div class="portfolio-icon">
-                                            <a href="{{ Storage::url($image->image) }}" data-group="portfolio-items" class="lightbox-group-gallery-item text-slate-blue text-slate-blue-hover rounded-circle bg-white"><i class="fas fa-search icon-very-small" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolio-caption bg-white padding-30px-tb lg-padding-20px-tb">
-                                    <a href="single-project-page-02.html">
-                                        <span class="alt-font text-extra-dark-gray font-weight-500">{!! $image->{'title_'.session('lang')} !!}</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+						</div>
+
+						<ul class="pagination">
+							<li class="pagination-prev"><span><span class="glyphicon glyphicon-menu-left"></span></span></li>
+
+							<li class="active"><span>1</span></li>
+
+							<li><a href="#"><span>2</span></a></li>
+
+							<li class="pagination-next"><a href="#"><span class="glyphicon glyphicon-menu-right"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 @endsection

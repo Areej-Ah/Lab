@@ -1,31 +1,41 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en-US">
 <head>
-    @if(lang() == "ar")
-    <title>{!! setting()->sitename_ar !!}</title>
-    @else
-    <title>{!! setting()->sitename_en !!}</title>
-    @endif
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="{{ setting()->sitename_ar }}">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
-    <meta name="description" content="{{ setting()->sitename_ar }}">
-    <!-- favicon icon -->
-    <link rel="shortcut icon" href="{{ Storage::url(setting()->icon) }}">
-    <link rel="apple-touch-icon" href="{{ Storage::url(setting()->icon) }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ Storage::url(setting()->icon) }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ Storage::url(setting()->icon) }}">
-    <!-- style sheets and font icons  -->
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/css/font-icons.min.css">
-    @if(lang() == "ar")
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/css/theme-vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/css/responsive.css" />
-    @else
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/E/css/theme-vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/E/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('frontend/sadu') }}/E/css/responsive.css" />
-    @endif
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+	<meta name="keywords" content="Confirmation Lab" />
+	<meta name="description" content="Confirmation Lab">
+
+	<title>Confirmation Lab</title>
+
+	<link rel="apple-touch-icon" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="144x144">
+	<link rel="apple-touch-icon" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="114x114">
+	<link rel="apple-touch-icon" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="72x72">
+	<link rel="apple-touch-icon" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="57x57">
+
+	<link rel="icon" type="image/png" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="16x16">
+	<link rel="icon" type="image/png" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="96x96">
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/bootstrap.css')}}" type="text/css" media="all">
+
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/sliders/ios/style.css')}}" type="text/css" media="all">
+
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/template.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/responsive.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/base-sizing.css')}}" type="text/css" media="all">
+
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/niches/custom-dental.css')}}" type="text/css" />
+
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/custom.css')}}" type="text/css" />
+
+	<script type="text/javascript" src="{{URL::asset('frontend/lab/js/modernizr.min.js')}}"></script>
+
+	<script type="text/javascript" src="{{URL::asset('frontend/lab/js/jquery.js')}}"></script>
 </head>
-<body data-mobile-nav-style="classic">
+<body class="">
+
+	<div id="page_wrapper">

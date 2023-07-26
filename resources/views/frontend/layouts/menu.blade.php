@@ -1,83 +1,129 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent border-bottom
-                border-color-white-transparent header-light fixed-top navbar-boxed header-reverse-scroll">
-        <div class="container-fluid nav-header-container">
-            <div class="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0">
-                <a class="navbar-brand" href="{{ url ('/') }}">
-                    <img src="{{ Storage::url(setting()->logo) }}"
-                         data-at2x="{{ Storage::url(setting()->logo) }}"
-                         class="default-logo" alt="{{ $setting->sitename_ar }}"
-                         title="{{ $setting->sitename_ar }}">
-                    <img src="{{ Storage::url(setting()->logo) }}"
-                         data-at2x="{{ Storage::url(setting()->logo2) }}"
-                         class="alt-logo" alt="{{ $setting->sitename_ar }}"
-                         title="{{ $setting->sitename_ar }}">
-                    <img src="{{ Storage::url(setting()->logo2) }}"
-                         data-at2x="{{ Storage::url(setting()->logo2) }}"
-                         class="mobile-logo" alt="{{ $setting->sitename_ar }}"
-                         title="{{ $setting->sitename_ar }}">
-                </a>
-            </div>
-            <div class="col-auto col-lg-8 menu-order px-lg-0">
-                <button class="navbar-toggler float-end" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-line"></span>
-                    <span class="navbar-toggler-line"></span>
-                    <span class="navbar-toggler-line"></span>
-                    <span class="navbar-toggler-line"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                     <ul class="navbar-nav alt-font">
-                        <li class="nav-item"> <a href="{{ url ('/') }}" class="nav-link">{!! trans('admin.home') !!}</a></li>
-                        <li class="nav-item"> <a href="{{ url ('/about') }}" class="nav-link">{!! trans('admin.about') !!}</a></li>
-                        <li class="nav-item"> <a href="{{ url ('/services') }}" class="nav-link">{!! trans('admin.our_areas_of_works') !!}</a></li>
-                        <li class="nav-item dropdown simple-dropdown">
+<header id="header" class="site-header style5 cta_button" data-header-style="5">
+			<div class="container siteheader-container header--oldstyles">
+				<div class="logo-container hasInfoCard logosize--yes">
+					<h1 class="site-logo logo " id="logo">
+						<a href="index.html">
+							<img src="{{asset('frontend/lab/images/logo2.png')}}" class="logo-img" alt="Confirmation Lab" title="Confirmation Lab" />
+						</a>
+					</h1>
 
-                            <a href="#services" class="nav-link">{!! trans('admin.media_center') !!}</a>
-                            <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown" aria-hidden="true"></i>
+					<div id="infocard" class="logo-infocard">
+						<div class="custom">
+							<div class="row">
+								<div class="col-sm-5">
+									<p>&nbsp;
 
-                            <ul class="dropdown-menu" role="menu">
-                                {{--<li class="dropdown"><a href="javascript:void(0);">{{ trans('admin.identity') }}</a></li> --}}
-                                <li class="dropdown"><a href="{{ url ('/news') }}">{!! trans('admin.news') !!}</a></li>
-                                <li class="dropdown"><a href="{{ url ('/images') }}">{{ trans('admin.image_gallery') }}</a></li>
-                                <li class="dropdown"><a href="{{ url ('/videos') }}">{{ trans('admin.video_gallery') }}</a></li>
-                               {{-- <li class="dropdown"><a href="javascript:void(0);">{{ trans('admin.annual_report') }}</a></li> --}}
-                                <li class="dropdown"><a target="_blank" href="{{ url('frontend/sadu') }}/profile.pdf">{!! trans('admin.company_profile') !!}</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"> <a href="{{ url ('/clients') }}" class="nav-link">{!! trans('admin.clients') !!}</a></li>
-                       {{-- <li class="nav-item"> <a href="#suppliers" class="nav-link">{{ trans('admin.suppliers_gate') }}</a></li> --}}
-                        <li class="nav-item"> <a href="{{ url ('/jobs') }}" class="nav-link">{!! trans('admin.employment') !!}</a></li>
-                        <li class="nav-item"> <a href="{{ url ('/contact') }}" class="nav-link">{!! trans('admin.contact_us') !!}</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-auto col-lg-2 text-start pe-0 font-size-0">
-                <div class="header-social-icon d-inline-block">
-                    @foreach($socialMedia as $item)
-                        <a href="{{ $item->link }}" target="_blank"><i class="fab {{ $item->icon }}"></i></a>
-                    @endforeach
-                </div>
-                <div class="header-language dropdown d-lg-inline-block">
-                    <a href="javascript:void(0);"><i class="feather icon-feather-globe"></i></a>
-                    <ul class="dropdown-menu alt-font">
-                        <li><a href="{{ url('lang/en')}}" title="English">
-                            <span class="icon-country">
-                                <img src="{{ url ('frontend/sadu/images/country-flag-16X16/usa.png') }}" alt="">
-                            </span>English</a>
-                        </li>
-                        <li><a href="{{ url('lang/ar')}}" title="Arabic">
-                            <span class="icon-country">
-                                <img src="{{ url ('frontend/sadu/images/country-flag-16X16/Saudi Arabia.png') }}" alt="">
-                            </span>عربي</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+									</p>
+									<p style="text-align: center;">
+										<img src="{{asset('images/favicons/favicon-16x16.png')}}" class="" alt="Confirmation Lab" title="Confirmation Lab" />
+									</p>
+									<p style="text-align: center;">
+										Confirmation Lab
+									</p>
+								</div>
+
+								<div class="col-sm-7">
+									<div class="custom contact-details">
+										<p>
+											<strong>T (00966) 555 55 00</strong><br>
+											Email:&nbsp;<a href="mailto:sales@yourwebsite.com">sales@yourwebsite.com</a>
+										</p>
+										<p>
+											Saudi Arabia <br>
+											Ryiadh
+										</p>
+										<a href="http://goo.gl/maps/1OhOu" class="map-link" target="_blank" title="">
+											<span class="glyphicon glyphicon-map-marker icon-white"></span>
+											<span>Open in Google Maps</span>
+										</a>
+									</div>
+									<div style="height:20px;">
+									</div>
+									<ul class="social-icons sc--clean">
+										<li><a href="#" target="_blank" class="icon-twitter" title="Twitter"></a></li>
+										<li><a href="#" target="_blank" class="icon-facebook" title="Facebook"></a></li>
+										<li><a href="#" target="_blank" class="icon-instagram" title="Instagram"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="separator site-header-separator visible-xs mb-0"></div>
+
+				<div class="header-links-container">
+					<ul class="social-icons sc--clean topnav navRight">
+						<li><a href="#" target="_blank" class="icon-facebook" title="Facebook"></a></li>
+						<li><a href="#" target="_blank" class="icon-twitter" title="Twitter"></a></li>
+						<li><a href="#" target="_blank" class="icon-instagram" title="Instagram"></a></li>
+					</ul>
+
+					<ul class="topnav navLeft topnav--lang">
+						<li class="languages drop">
+							<a href="#">
+								<span class="globe glyphicon glyphicon-globe icon-white xs-icon"></span>
+								<span class="hidden-xs">LANGUAGES</span>
+							</a>
+							<div class="pPanel">
+								<ul class="inner">
+									<li class="toplang-item">
+										<a href="#">
+											<img src="images/en.png" class="toplang-flag" alt="English" title="" /> English
+										</a>
+									</li>
+									<li class="toplang-item">
+										<a href="#">
+											<img src="images/ar.png" class="toplang-flag" alt="Arabic" title="Arabic" /> Arabic
+										</a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="separator site-header-separator visible-xs"></div>
+
+				<div id="search" class="header-search">
+					<a href="#" class="searchBtn "><span class="glyphicon glyphicon-search icon-white"></span></a>
+					<div class="search-container">
+						<form id="searchform" class="header-searchform" action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" target="_blank">
+							<input type="hidden" id="q" name="q"/>
+							<input name="s" maxlength="20" class="inputbox" type="text" size="20" value="SEARCH ..." onblur="if (this.value=='') this.value='SEARCH ...';" onfocus="if (this.value=='SEARCH ...') this.value='';">
+							<button type="submit" id="searchsubmit" class="searchsubmit glyphicon glyphicon-search icon-white"></button>
+							<span class="kl-field-bg"></span>
+						</form>
+					</div>
+				</div>
+
+
+				<div id="zn-res-menuwrapper">
+					<a href="#" class="zn-res-trigger zn-header-icon"></a>
+				</div>
+
+				<div id="main-menu" class="main-nav zn_mega_wrapper ">
+					<ul id="menu-main-menu" class="main-menu zn_mega_menu">
+						<li><a href="{{ url ('/') }}">Home</a></li>
+						<li><a href="{{ url ('/about') }}">About Us</a></li>
+						<li class="menu-item-has-children"><a href="{{ url ('/services') }}">Our Services</a>
+							<ul class="sub-menu clearfix">
+								<li><a href="service.html">Service Title</a></li>
+								<li><a href="service.html">Service Title</a></li>
+							</ul>
+						</li>
+						<li><a href="{{ url ('/news') }}">Our News</a></li>
+						<li class="menu-item-has-children"><a href="#">Our Gallery</a>
+							<ul class="sub-menu clearfix">
+								<li><a href="{{ url ('/videos') }}">Video</a></li>
+								<li><a href="{{ url ('/images') }}">Photo</a></li>
+							</ul>
+						</li>
+						<li><a href="{{ url ('/jobs') }}">Jobs</a></li>
+						<li><a href="{{ url ('/contact') }}">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
 </header>
-<div class="main-content">
+

@@ -1,158 +1,151 @@
-@extends('frontend.index')
-
+@extends('frontend.index2')
+@section('page_name','ABOUT US')
 @section('content')
 
-<section class="no-padding one-half-screen position-relative">
-    <div class="opacity-full bg-gradient-fast-blue-purple z-index-0"></div>
-    <div class="container h-100">
-        <div class="row align-items-end justify-content-center h-100">
-            <div class="col-12 col-xl-6 col-lg-7 col-md-10 position-relative page-title-large text-center">
-                <span class="margin-15px-bottom alt-font  text-extra-large text-white d-block">{!! trans('admin.intro') !!}</span>
-                <h1 class="text-white alt-font font-weight-500
-                           margin-5-rem-bottom sm-margin-3-rem-bottom">{!! trans('admin.know_us') !!}</h1>
-                <span class="w-1px h-80px d-inline-block
-                      bg-white margin-5-rem-bottom sm-margin-3-rem-bottom sm-h-50px"></span>
-            </div>
-        </div>
-    </div>
-    <video loop="" autoplay="" controls="" muted class="html-video" poster="https://via.placeholder.com/1920x1080">
-        <source type="video/mp4" src="{{ url ('frontend/sadu/video/video.mp4') }}" />
-    </video>
-</section>
+<section class="hg_section hg_section--relative bg-white ptop-80 pbottom-80">
+			<div class="container">
+				<div class="row">
 
-<section id="down-section">
-    <div class="container">
-        <div class="row align-items-center" style="flex-direction: row;">
-            <div class="col-12 col-md-6 position-relative sm-margin-30px-bottom">
-                <img class="border-radius-5px" src="{{ url ('frontend/sadu/images/s1.jpg') }}" alt="" />
-                <a href="{{ Storage::url(setting()->video) }}"
-                   class="popup-youtube video-icon-box video-icon-large absolute-middle-center">
-                    <span>
-                        <span class="video-icon bg-gradient-magenta-orange-2">
-                            <i class="icon-simple-line-control-play text-white"></i>
-                            <span class="video-icon-sonar">
-                                <span class="video-icon-sonar-bfr bg-gradient-magenta-orange-2 opacity-7"></span>
-                                <span class="video-icon-sonar-afr bg-gradient-magenta-orange-2"></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-            <div class="col-12 col-lg-5 col-md-6 offset-lg-1">
-                <h5 class="alt-font font-weight-500 text-extra-dark-gray w-90">{!! trans('admin.intro') !!}</h5>
-                <p class="lg-w-90 text-extra-large">{!! $setting->{'description_'.session('lang')} !!}</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="half-section bg-light-gray wow animate__fadeIn">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2">
-
-            <div class="col wow animate__fadeIn" data-wow-delay="0.2s">
-                <div class="feature-box feature-box-shadow padding-twenty-tb padding-twelve-lr
-                            xs-padding-fifteen-tb xs-padding-eight-lr">
-                    <div class="feature-box-icon">
-                        <i class="line-icon-Telescope icon-medium text-dark-golden-yellow
-                                  margin-40px-bottom md-margin-20px-bottom"></i>
-                    </div>
-                    <div class="feature-box-content last-paragraph-no-margin" style="text-align: center;">
-
-                        <span class="text-extra-medium alt-font text-dark-golden-yellow d-block margin-5px-bottom font-weight-500">{!! trans('admin.vision') !!}</span>
-
-                        <p>{!! $setting->{'vision_'.session('lang')} !!}</p>
-                    </div>
-                    <div class="feature-box-overlay bg-white border-radius-5px"></div>
-                </div>
-            </div>
-
-            <div class="col wow animate__fadeIn" data-wow-delay="0.4s">
-                <div class="feature-box feature-box-shadow padding-twenty-tb padding-twelve-lr
-                            xs-padding-fifteen-tb xs-padding-eight-lr">
-                    <div class="feature-box-icon">
-                        <i class="line-icon-Pencil icon-medium text-dark-golden-yellow
-                                  margin-40px-bottom md-margin-20px-bottom"></i>
-                    </div>
-                    <div class="feature-box-content last-paragraph-no-margin" style="text-align: center;">
-
-                        <span class="text-extra-medium alt-font text-dark-golden-yellow text-gradient-orange-pink-hover d-block margin-5px-bottom font-weight-500">{!! trans('admin.message') !!}</span>
-
-                        <p>{!! $setting->{'message_'.session('lang')} !!}</p>
-                    </div>
-                    <div class="feature-box-overlay bg-white border-radius-5px"></div>
-                </div>
-            </div>
-
-            <div class="col wow animate__fadeIn" data-wow-delay="0.6s">
-                <div class="feature-box feature-box-shadow padding-twenty-tb padding-twelve-lr xs-padding-fifteen-tb
-                            xs-padding-eight-lr">
-                    <div class="feature-box-icon">
-                        <i class="line-icon-Diamond icon-medium text-dark-golden-yellow margin-40px-bottom
-                                  md-margin-20px-bottom"></i>
-                    </div>
-                    <div class="feature-box-content last-paragraph-no-margin" style="text-align: center;">
-
-                        <span class="text-extra-medium alt-font text-dark-golden-yellow d-block margin-5px-bottom font-weight-500">{!! trans('admin.values') !!}</span>
-
-                        <p>{!! $setting->{'values_'.session('lang')} !!}</p>
-                    </div>
-                    <div class="feature-box-overlay bg-white border-radius-5px"></div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-
-<section class="half-section parallax" data-parallax-background-ratio="0.1"
-        style="background-image: url({{ url ('frontend/sadu/images/s2.jpg') }});">
-        <div class="opacity-full bg-gradient-light-purple-light-orange"></div>
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="row position-relative">
-
-                <div class="col-12 col-lg-4  col-md-4 col-sm-6 text-center text-md-start sm-margin-30px-bottom
-                            xs-margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.1s" style="direction: ltr;">
-                    <div class="d-flex flex-row align-item-start margin-10px-bottom justify-content-center ">
-                        <h2 class="vertical-counter d-inline-flex text-white alt-font appear font-weight-600
-                                mb-0 " data-to="{{ $setting->number_of_beneficiaries }}"></h2>
-                                <span class="text-dark-golden-yellow title-extra-small
-                                        font-weight-500 margin-5px-left">+</span>
+                    <div class="col-md-12 col-sm-12">
+                          <div class="kl-title-block clearfix text-left tbk-symbol--icon tbk--colored tbk-icon-pos--left-title">
+							<h3 class="tbk__title ansation fs-38 lh-38  fw-bold">
+								<span class="tbk__symbol">
+									<span class="tbk__icon glyphicon glyphicon-option-horizontal blue"></span>
+								</span>
+								Who We Are ?
+							</h3>
+						</div>
                     </div>
 
-                    <span class="alt-font text-extra-large  d-block text-white" style="text-align: center;">{!! trans('admin.beneficiaries') !!}</span>
+					<div class="col-md-8 col-sm-8">
+						<div class="hg_accordion_element style3">
 
-                </div>
+							<div class="th-accordion">
+								<div class="acc-group">
+									<a data-toggle="collapse" data-target="#acc13" class="" aria-expanded="true">About Us<span class="acc-icon"></span></a>
 
-                <div class="col-12 col-lg-4  col-md-4 col-sm-6 text-center text-md-start sm-margin-30px-bottom
-                            xs-margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.2s" style="direction: ltr;">
-                    <div class="d-flex flex-row align-item-start margin-10px-bottom justify-content-center">
-                        <h2 class="vertical-counter d-inline-flex text-white alt-font appear
-                                font-weight-600  mb-0 " data-to="{{ $setting->number_of_employees}}"></h2>
-                                <span class="text-dark-golden-yellow title-extra-small
-                                                font-weight-500 margin-5px-left">+</span>
-                    </div>
-                    <span class="alt-font text-extra-large  d-block text-white" style="text-align: center;">{!! trans('admin.employee') !!}</span>
-                </div>
+									<div id="acc13" class="collapse in" aria-expanded="true">
+										<div class="content">
+											<p>
+                                                <div style="text-align: justify;">
+                                                    Confirmation Lab is a laboratory that provides accurate and reliable testing services for food and water in Saudi Arabia. The laboratory is staffed with highly qualified professionals and equipped with state-of-the-art technology to ensure the quality and safety of products that consumers buy and consume.
+													Confirmation Lab provides a variety of testing services for food and water including microbiological testing, chemical analysis. The laboratory also offers technical support and consultation services to help clients understand their testing results and make informed decisions about their products.
+													Whether you are a food, beverage and watermanufacturer, importer, exporter, or distributor, Confirmation Lab is committed to ensure and check that your products meet the highest standards of quality and safety. The laboratory strives for excellence to provide cost-effective testing and support services to its clients, making it a trusted partner for food and water testing in Saudi Arabia.
 
-                <div class="col-12 col-lg-4  col-md-4 col-sm-6 text-center text-md-start xs-margin-40px-bottom
-                            wow animate__fadeIn" data-wow-delay="0.3s" style="direction: ltr;">
-                    <div class="d-flex flex-row align-item-start margin-10px-bottom justify-content-center ">
-                        <h2 class="vertical-counter d-inline-flex text-white alt-font appear
-                                font-weight-600  mb-0 " data-to="{{$setting->number_of_projects}}"></h2>
-                                <span class="text-dark-golden-yellow title-extra-small
-                                                font-weight-500 margin-5px-left">+</span>
-                    </div>
-                    <span class="alt-font text-extra-large  d-block text-white" style="text-align: center;">{!! trans('admin.projects') !!}</span>
-                </div>
+                                                </div>
+											</p>
+										</div>
+									</div>
+								</div>
 
-            </div>
-        </div>
-    </div>
-</section>
+								<div class="acc-group">
+									<a data-toggle="collapse" data-target="#acc14" class="collapsed">QUALITY POLICY<span class="acc-icon"></span></a>
+
+									<div id="acc14" class="collapse ">
+										<div class="content">
+											<p>
+                                                <div style="text-align: justify;">
+                                                   Our Quality Policy is to carry out laboratory activities in a competent, impartial, confidential, and consistent manner that ensures the validity of results and continual improvement in the performance of the LMS. We also aim to comply with customers and regulatory authorities.
+													To achieve this, all supervisors are responsible for ensuring that their employees are trained in approved work procedures to obtain optimal output without errors or omissions. They must also ensure that employees follow laboratory methods and related regulations.
+													All personnel are required to support the LMS and make improvement part of their daily routine. They must also ensure that they are following valid work methods. All personnel will be held accountable for implementing the LMS.
+													Our program incorporates all relevant laws and regulations.
+
+                                                </div>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="acc-group">
+									<a data-toggle="collapse" data-target="#acc15" class="collapsed">OBJECTIVE<span class="acc-icon"></span></a>
+
+									<div id="acc15" class="collapse ">
+										<div class="content">
+											<p>
+												<div style="text-align: justify;">
+                                                    We are committed to continually improving the LMS to provide excellent laboratory testing and calibration services that consistently comply with current legislation and regulations, at the best possible cost, and delivered in a timely manner.
+                                                </div>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="acc-group">
+									<a data-toggle="collapse" data-target="#acc16" class="collapsed">CORPORATE MISSION<span class="acc-icon"></span></a>
+
+									<div id="acc16" class="collapse ">
+										<div class="content">
+								            <p  style="text-align: justify;">
+                                                 Our mission is to provide world-class laboratory services at a low cost, while remaining a prime services. To achieve this, we empower our workforce and utilize our resources to offer competitive and innovative services to our customers. Additionally, we aim to create positive, long-term social, cultural, and economic benefits for the region, including our employees, customers, suppliers, and interested parties.
+												We recognize our important responsibilities to the community for essential laboratory services. Therefore, we support responsible stewardship of qulaity in the workplace, and we strive for continual improvement in our processes to enable sustained economic development and an improved quality of life.
+												Our commitment is to provide "impartial, confidential, and valid results" to our customers.
+											</p>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="acc-group">
+									<a data-toggle="collapse" data-target="#acc17" class="collapsed">Our Mission and Vision <span class="acc-icon"></span></a>
+									<div id="acc17" class="collapse ">
+										<div class="content">
+								            <p  style="text-align: justify;">
+                                                 Vision: Our goal is to be a top choice for clients who require accurate, precise, and timely analysis, inspection, diagnosis, and consultancy services.
+												<br/>
+												Mission: Our mission is to offer cost-effective testing and support services to our clients.
+												<br/>
+												Services: We are dedicated to satisfying our customers through the services we provide.
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-4">
+						<div class="adbox video mb-50">
+							<img src="images/video-image.jpg" style="height: 640px; width: auto;" alt="" title="">
+
+							<div class="video_trigger_wrapper">
+								<div class="adbox_container">
+									<a class="playVideo" data-lightbox="iframe" href="https://www.youtube.com/watch?v=WN_VGtBAmOM"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+        <section class="hg_section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="hg_separator clearfix mb-65">
+						</div>
+					</div>
+
+					<div class="col-md-9 col-sm-9">
+						<div class="kl-title-block clearfix tbk--text-default tbk--left text-left tbk-symbol-- tbk-icon-pos--after-title">
+							<h3 class="tbk__title montserrat fw-semibold tcolor">WORK WITH US</h3>
+							<h4 class="tbk__subtitle">We'll do everything we can to make our next best client</h4>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+						<div class="th-spacer clearfix" style="height: 10px;">
+						</div>
+
+						<div class="zn_buttons_element text-left">
+							<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="contact.html" style="margin:0 0 10px 0;"><span>Contact Us</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 @endsection
