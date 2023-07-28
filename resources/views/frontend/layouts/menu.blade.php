@@ -3,7 +3,7 @@
 				<div class="logo-container hasInfoCard logosize--yes">
 					<h1 class="site-logo logo " id="logo">
 						<a href="index.html">
-							<img src="{{asset('frontend/lab/images/logo2.png')}}" class="logo-img" alt="Confirmation Lab" title="Confirmation Lab" />
+							<img src="{{ Storage::url(setting()->logo) }}" class="logo-img" alt="Confirmation Lab" title="Confirmation Lab" />
 						</a>
 					</h1>
 
@@ -15,22 +15,22 @@
 
 									</p>
 									<p style="text-align: center;">
-										<img src="{{asset('images/favicons/favicon-16x16.png')}}" class="" alt="Confirmation Lab" title="Confirmation Lab" />
+										<img src="{{ Storage::url(setting()->logo2) }}" class="" alt="Confirmation Lab" title="Confirmation Lab" />
 									</p>
 									<p style="text-align: center;">
-										Confirmation Lab
+									{!! $setting->sitename_en !!}
 									</p>
 								</div>
 
 								<div class="col-sm-7">
 									<div class="custom contact-details">
 										<p>
-											<strong>T (00966) 555 55 00</strong><br>
-											Email:&nbsp;<a href="mailto:sales@yourwebsite.com">sales@yourwebsite.com</a>
+											<strong>{!! $setting->mobile !!}</strong><br>
+											Email:&nbsp;<a href="mailto:sales@yourwebsite.com">{!! $setting->email !!}</a>
 										</p>
 										<p>
-											Saudi Arabia <br>
-											Ryiadh
+										{!! $setting->location !!}
+
 										</p>
 										<a href="http://goo.gl/maps/1OhOu" class="map-link" target="_blank" title="">
 											<span class="glyphicon glyphicon-map-marker icon-white"></span>
@@ -40,9 +40,9 @@
 									<div style="height:20px;">
 									</div>
 									<ul class="social-icons sc--clean">
-										<li><a href="#" target="_blank" class="icon-twitter" title="Twitter"></a></li>
-										<li><a href="#" target="_blank" class="icon-facebook" title="Facebook"></a></li>
-										<li><a href="#" target="_blank" class="icon-instagram" title="Instagram"></a></li>
+                                        @foreach($socialMedia as $item)
+										<li><a href="{{ $item->link }}" target="_blank" class="icon-{{$item->icon}}"></a></li>
+                                        @endforeach
 									</ul>
 								</div>
 							</div>
@@ -54,9 +54,10 @@
 
 				<div class="header-links-container">
 					<ul class="social-icons sc--clean topnav navRight">
-						<li><a href="#" target="_blank" class="icon-facebook" title="Facebook"></a></li>
-						<li><a href="#" target="_blank" class="icon-twitter" title="Twitter"></a></li>
-						<li><a href="#" target="_blank" class="icon-instagram" title="Instagram"></a></li>
+                        @foreach($socialMedia as $item)
+						<li><a href="{{ $item->link }}" target="_blank" class="icon-{{$item->icon}}"></a></li>
+                        @endforeach
+
 					</ul>
 
 					<ul class="topnav navLeft topnav--lang">
@@ -68,13 +69,13 @@
 							<div class="pPanel">
 								<ul class="inner">
 									<li class="toplang-item">
-										<a href="#">
-											<img src="images/en.png" class="toplang-flag" alt="English" title="" /> English
+										<a href="{{ url('lang/en')}}">
+											<img src="{{asset('frontend/lab/images/en.png')}}" class="toplang-flag" alt="English" title="" /> English
 										</a>
 									</li>
 									<li class="toplang-item">
-										<a href="#">
-											<img src="images/ar.png" class="toplang-flag" alt="Arabic" title="Arabic" /> Arabic
+										<a href="{{ url('lang/ar')}}">
+											<img src="{{asset('frontend/lab/images/ar.png')}}" class="toplang-flag" alt="Arabic" title="Arabic" /> Arabic
 										</a>
 									</li>
 

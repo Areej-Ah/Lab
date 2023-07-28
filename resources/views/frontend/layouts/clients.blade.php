@@ -15,53 +15,13 @@
 
 								<div class="ts-pt-partners__carousel-wrapper">
 									<div class="ts-pt-partners__carousel">
+                                        @foreach($customers as $customer)
 										<div class="ts-pt-partners__carousel-item">
 											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo6.svg" alt="" title="" />
+												<img class="ts-pt-partners__img" src="{{ Storage::url($customer->logo) }}" alt="{{ $customer->name_en }}" title="" />
 											</a>
 										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo7.svg" alt="" title="" />
-											</a>
-										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo8.svg" alt="" title="" />
-											</a>
-										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo1.svg" alt="" title="" />
-											</a>
-										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo2.svg" alt="" title="" />
-											</a>
-										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo3.svg" alt="" title="" />
-											</a>
-										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo4.svg" alt="" title="" />
-											</a>
-										</div>
-
-										<div class="ts-pt-partners__carousel-item">
-											<a class="ts-pt-partners__link" href="#" target="_self" title="">
-												<img class="ts-pt-partners__img" src="images/logo5.svg" alt="" title="" />
-											</a>
-										</div>
+                                        @endforeach
 									</div>
 								</div>
 							</div>

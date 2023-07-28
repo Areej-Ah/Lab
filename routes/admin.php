@@ -41,6 +41,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'], function() {
         Route::resource('news','NewsController');
         Route::delete('news/destroy/all','NewsController@multi_delete');
 
+        Route::resource('teams','TeamsController');
+        Route::delete('teams/destroy/all','TeamsController@multi_delete');
+
         Route::resource('photos','PhotosController');
         Route::delete('photos/destroy/all','PhotosController@multi_delete');
 

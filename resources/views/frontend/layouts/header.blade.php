@@ -6,7 +6,11 @@
 	<meta name="keywords" content="Confirmation Lab" />
 	<meta name="description" content="Confirmation Lab">
 
-	<title>Confirmation Lab</title>
+	@if(lang() == "ar")
+    <title>{!! setting()->sitename_ar !!}</title>
+    @else
+    <title>{!! setting()->sitename_en !!}</title>
+    @endif
 
 	<link rel="apple-touch-icon" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="144x144">
 	<link rel="apple-touch-icon" href="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" sizes="114x114">

@@ -25,9 +25,9 @@
 								<h3 class="title_big">Food and Beverages Testing</h3>
 
 								<div class="more">
-									<a class="btn btn-fullcolor " href="about.html" target="_self">ABOUT US</a>
+									<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">ABOUT US</a>
 
-									<a class="btn btn-lined " href="contact.html" target="_self">CONTACT US</a>
+									<a class="btn btn-lined " href="{{ url ('/contact') }}" target="_self">CONTACT US</a>
 								</div>
 
 
@@ -49,9 +49,9 @@
 								<h3 class="title_big">Food and Beverages Testing</h3>
 
 								<div class="more">
-									<a class="btn btn-fullcolor " href="about.html" target="_self">ABOUT US</a>
+									<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">ABOUT US</a>
 
-									<a class="btn btn-lined " href="contact.html" target="_self">CONTACT US</a>
+									<a class="btn btn-lined " href="{{ url ('/contact') }}" target="_self">CONTACT US</a>
 								</div>
 
 
@@ -107,7 +107,7 @@
 									</div>
 
 									<div class="ac-buttons">
-										<a class="btn btn-fullwhite ac-btn" href="about.html" target="_self">LEARN MORE</a>
+										<a class="btn btn-fullwhite ac-btn" href="{{ url ('/about') }}" target="_self">LEARN MORE</a>
 									</div>
 								</div>
 							</div>

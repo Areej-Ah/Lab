@@ -5,7 +5,7 @@
 						<div>
 							<a href="contact.html" style="background-color: #34495e;" class="hover-box hover-box-2">
 								<span class="hb-circle"></span>
-								<img src="images/quote1.svg" class="hb-img rb-right" alt="" title="" />
+								<img src="{{asset('frontend/lab/images/quote1.svg')}}" class="hb-img rb-right" alt="" title="" />
 								<h3>Contact Us</h3>
 								<p>
 									Share your idea and let’s create<br>
@@ -19,7 +19,7 @@
 						<div>
 							<a href="jobs.html"  style="background-color: #34495e;" class="hover-box hover-box-2">
 								<span class="hb-circle"></span>
-								<img src="images/hb-hiring.svg" class="hb-img rb-right" alt="" title="" />
+								<img src="{{asset('frontend/lab/images/hb-hiring.svg')}}" class="hb-img rb-right" alt="" title="" />
 								<h3>Hiring: ON</h3>
 								<h4>join us</h4>
 								<p>
