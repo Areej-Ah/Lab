@@ -6,43 +6,23 @@
 							<h3 class="m_title montserrat">LATEST NEWS</h3>
 
 							<div class="row">
+                                @foreach($news as $new)
 								<div class="col-sm-6 col-lg-4 post">
 									<a href="l" class="hoverBorder plus">
 										<span class="hoverBorderWrapper">
-											<img src="images/n1.jpg" class="img-responsive" width="370" height="200" alt="" title="" />
+											<img src="{{ Storage::url($new->image) }}" class="img-responsive" width="370" height="200" alt="" title="" />
 											<span class="theHoverBorder"></span>
 										</span>
 										<h6>Read more +</h6>
 									</a>
-									<em>21 August 2023 </em>
-									<h3 class="m_title"><a href="new.html">News Title</a></h3>
+									<em>{!! $new->created_at->toFormattedDateString() !!} </em>
+									<h3 class="m_title"><a href="/new/{{ $new->id}}">{!! $new->title_en !!}</a></h3>
 								</div>
+                                @endforeach
 
-								<div class="col-sm-6 col-lg-4 post">
-									<a href="l" class="hoverBorder plus">
-										<span class="hoverBorderWrapper">
-											<img src="images/n2.jpg" class="img-responsive" width="370" height="200" alt="" title="" />
-											<span class="theHoverBorder"></span>
-										</span>
-										<h6>Read more +</h6>
-									</a>
-									<em>21 August 2023 </em>
-									<h3 class="m_title"><a href="new.html">News Title</a></h3>
-								</div>
 
-								<div class="col-sm-6 col-lg-4 post">
-									<a href="l" class="hoverBorder plus">
-										<span class="hoverBorderWrapper">
-											<img src="images/n3.jpg" class="img-responsive" width="370" height="200" alt="" title="" />
 
-											<span class="theHoverBorder"></span>
-										</span>
 
-										<h6>Read more +</h6>
-									</a>
-									<em>21 August 2023 </em>
-									<h3 class="m_title"><a href="new.html">News Title</a></h3>
-								</div>
 
 							</div>
 						</div>

@@ -11,12 +11,12 @@
 								<div class="itemContainer">
 									<div class="itemHeader">
 										<h3 class="itemTitle">
-											<a href="blog-post.html" title="Enthusiastically">News Title </a>
+											<a href="#" title="Enthusiastically">{!! $new->title_en !!} </a>
 										</h3>
 
 										<div class="post_details">
 											<span class="catItemDateCreated">
-											Friday, 21 August 2017 </span>
+											{!! $new->created_at->toFormattedDateString() !!} </span>
 
 										</div>
 									</div>
@@ -24,12 +24,12 @@
 									<div class="itemBody">
 										<div class="itemIntroText">
 											<div class="hg_post_image">
-												<a href="blog-post.html" class="pull-left" title="Enthusiastically">
-													<img src="images/n2.jpg" class="" width="457" height="320" alt="Enthusiastically" title="Enthusiastically" />
+												<a href="#" class="pull-left" title="Enthusiastically">
+													<img src="{{ Storage::url($new->image) }}" class="" width="457" height="320" alt="Enthusiastically" title="Enthusiastically" />
 												</a>
 											</div>
 											<p>
-												Our microbiology laboratory have the expertise and capabilities to test ingredients, in-process and finish products. A variety of methods are available to meet your specifications, ensuring safe food, beverage and water. We offer a wide range of microbiology testing, using both reference and alternative methodologies, and have an experienced team to carry out these tests.
+                                            {!! $new->text_en !!}
 											</p>
 										</div>
 
@@ -67,54 +67,20 @@
 								<div class=" latest_posts style3">
 									<h3 class="widgettitle title">Recent News</h3>
 									<ul class="posts">
+                                    @foreach($news as $new)
 										<li class="lp-post">
-											<a href="new.html" class="hoverBorder pull-left">
+											<a href="/new/{{ $new->id}}" class="hoverBorder pull-left">
 												<span class="hoverBorderWrapper">
-													<img src="images/n1.jpg" style="width: 70px; height: auto;" alt="News Title">
+													<img src="{{ Storage::url($new->image) }}" style="width: 70px; height: auto;" alt="News Title">
 													<span class="theHoverBorder"></span>
 												</span>
 											</a>
 											<h4 class="title">
-												<a href="new.html" title="News Title">News Title</a>
+												<a href="/new/{{ $new->id}}" title="News Title">{!! $new->title_en !!}</a>
 											</h4>
 
 										</li>
-										<li class="lp-post">
-											<a href="new.html" class="hoverBorder pull-left">
-												<span class="hoverBorderWrapper">
-													<img src="images/n3.jpg" style="width: 70px; height: auto;" alt="News Title">
-													<span class="theHoverBorder"></span>
-												</span>
-											</a>
-											<h4 class="title">
-												<a href="new.html" title="News Title">News Title</a>
-											</h4>
-
-										</li>
-										<li class="lp-post">
-											<a href="new.html" class="hoverBorder pull-left">
-												<span class="hoverBorderWrapper">
-													<img src="images/n2.jpg" style="width: 70px; height: auto;" alt="News Title">
-													<span class="theHoverBorder"></span>
-												</span>
-											</a>
-											<h4 class="title">
-												<a href="new.html" title="News Title">News Title</a>
-											</h4>
-
-										</li>
-										<li class="lp-post">
-											<a href="new.html" class="hoverBorder pull-left">
-												<span class="hoverBorderWrapper">
-													<img src="images/n3.jpg" style="width: 70px; height: auto;" alt="News Title">
-													<span class="theHoverBorder"></span>
-												</span>
-											</a>
-											<h4 class="title">
-												<a href="new.html" title="News Title">News Title</a>
-											</h4>
-
-										</li>
+                                        @endforeach
 
 									</ul>
 								</div>

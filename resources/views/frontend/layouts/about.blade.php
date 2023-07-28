@@ -21,7 +21,7 @@
 								<div class="kl-iconbox kl-iconbox--fleft text-left">
 									<div class="kl-iconbox__inner">
 										<div class="kl-iconbox__icon-wrapper">
-											<img class="kl-iconbox__icon" src="images/vision.png" alt="Stunning Page Builder">
+											<img class="kl-iconbox__icon" src="{{asset('frontend/lab/images/vision.png')}}" alt="Stunning Page Builder">
 										</div>
 
 										<div class="kl-iconbox__content-wrapper">
@@ -31,10 +31,7 @@
 
 											<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-													Vision: Our goal is to be a top choice for clients who require accurate, precise, and timely analysis, inspection, diagnosis, and consultancy services.
-													<br/>
-													Mission: Our mission is to offer cost-effective testing and support services to our clients.
-
+                                                {!! $setting->vision_en !!}
 												</p>
 											</div>
 										</div>
@@ -46,7 +43,7 @@
 								<div class="kl-iconbox kl-iconbox--fleft text-left">
 									<div class="kl-iconbox__inner">
 										<div class="kl-iconbox__icon-wrapper">
-											<img class="kl-iconbox__icon" src="images/Quality.png" alt="QUALITY POLICY">
+											<img class="kl-iconbox__icon" src="{{asset('frontend/lab/images/Quality.png')}}" alt="QUALITY POLICY">
 										</div>
 
 										<div class="kl-iconbox__content-wrapper">
@@ -56,7 +53,7 @@
 
 											<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-													Our Quality Policy is to carry out laboratory activities in a competent, impartial, confidential, and consistent manner that ensures the validity of results and continual improvement in the performance of the LMS. We also aim to comply with customers and regulatory authorities.
+												{!! $setting->quality_policy_en !!}
 												</p>
 											</div>
 										</div>
@@ -69,7 +66,7 @@
 									<div class="kl-iconbox__inner">
 
 										<div class="kl-iconbox__icon-wrapper ">
-											<img class="kl-iconbox__icon" src="images/goals.png" alt="Mature project">
+											<img class="kl-iconbox__icon" src="{{asset('frontend/lab/images/goals.png')}}" alt="Mature project">
 										</div>
 
 
@@ -80,7 +77,7 @@
 
 											<div class="kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-													We are committed to continually improving the LMS to provide excellent laboratory testing and calibration services that consistently comply with current legislation and regulations, at the best possible cost, and delivered in a timely manner.
+                                                {!! $setting->objective_en !!}
 												</p>
 											</div>
 										</div>
@@ -92,7 +89,7 @@
 								<div class="kl-iconbox kl-iconbox--fleft text-left">
 									<div class="kl-iconbox__inner">
 										<div class="kl-iconbox__icon-wrapper ">
-											<img class="kl-iconbox__icon" src="images/mision.png" alt="Mature project">
+											<img class="kl-iconbox__icon" src="{{asset('frontend/lab/images/mision.png')}}" alt="Mature project">
 										</div>
 
 										<div class="kl-iconbox__content-wrapper">
@@ -102,7 +99,7 @@
 
 											<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-													Our mission is to provide world-class laboratory services at a low cost, while remaining a prime services. To achieve this, we empower our workforce and utilize our resources to offer competitive and innovative services to our customers.
+                                                {!! $setting->corporate_mission_en !!}
 												</p>
 											</div>
 										</div>
@@ -121,7 +118,7 @@
 					<div class="col-md-6 col-sm-6">
 						<div class="box image-boxes imgboxes_style4 kl-title_style_bottom">
 							<a class="imgboxes4_link imgboxes-wrapper" href="service.html" target="_self">
-								<img src="images/s1.jpg" alt="Microbiology Department" title="Microbiology Department" class="img-responsive imgbox_image cover-fit-img">
+								<img src="{{asset('frontend/lab/images/s1.jpg')}}" alt="Microbiology Department" title="Microbiology Department" class="img-responsive imgbox_image cover-fit-img">
 
 								<span class="imgboxes-border-helper"></span>
 
@@ -136,7 +133,7 @@
 					<div class="col-md-6 col-sm-6">
 						<div class="box image-boxes imgboxes_style4 kl-title_style_bottom">
 							<a class="imgboxes4_link imgboxes-wrapper" href="service.html" target="_self">
-								<img src="images/s2.jpg" alt="Chemistry Department" title="Chemistry Department" class="img-responsive imgbox_image cover-fit-img">
+								<img src="{{asset('frontend/lab/images/s2.jpg')}}" alt="Chemistry Department" title="Chemistry Department" class="img-responsive imgbox_image cover-fit-img">
 
 								<span class="imgboxes-border-helper"></span>
 
@@ -158,7 +155,7 @@
 					<div class="col-md-5 col-sm-12">
 						<div class="media-container style2 h-615">
 							<div class="kl-bg-source">
-								<div class="kl-bg-source__bgimage" style="background-image:url(images/video-image.jpg); background-repeat:no-repeat; background-attachment:scroll; background-position-x:center; background-position-y:center; background-size:cover">
+								<div class="kl-bg-source__bgimage" style="background-image:url(frontend/lab/images/video-image.jpg); background-repeat:no-repeat; background-attachment:scroll; background-position-x:center; background-position-y:center; background-size:cover">
 								</div>
 
 								<div class="kl-bg-source__overlay" style="background:rgba(137,173,178,0.3); background: -moz-linear-gradient(left, rgba(137,173,178,0.3) 0%, rgba(53,53,53,0.65) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(137,173,178,0.3)), color-stop(100%,rgba(53,53,53,0.65))); background: -webkit-linear-gradient(left, rgba(137,173,178,0.3) 0%,rgba(53,53,53,0.65) 100%); background: -o-linear-gradient(left, rgba(137,173,178,0.3) 0%,rgba(53,53,53,0.65) 100%); background: -ms-linear-gradient(left, rgba(137,173,178,0.3) 0%,rgba(53,53,53,0.65) 100%); background: linear-gradient(to right, rgba(137,173,178,0.3) 0%,rgba(53,53,53,0.65) 100%); ">
@@ -194,9 +191,7 @@
 								<div class="col-md-8 col-sm-8">
 									<div class="text_box">
 										<p>
-											Confirmation Lab is a laboratory that provides accurate and reliable testing services for food and water in Saudi Arabia. The laboratory is staffed with highly qualified professionals and equipped with state-of-the-art technology to ensure the quality and safety of products that consumers buy and consume.
-											Confirmation Lab provides a variety of testing services for food and water including microbiological testing, chemical analysis. The laboratory also offers technical support and consultation services to help clients understand their testing results and make informed decisions about their products.
-											Whether you are a food, beverage and watermanufacturer, importer, exporter, or distributor, Confirmation Lab is committed to ensure and check that your products meet the highest standards of quality and safety. The laboratory strives for excellence to provide cost-effective testing and support services to its clients, making it a trusted partner for food and water testing in Saudi Arabia.
+                                        {!! $setting->about_en !!}
 
 										</p>
 									</div>
@@ -204,7 +199,7 @@
 
 								<div class="col-md-4 col-sm-4">
 									<div class="adbox video">
-										<img src="images/s1.jpg" alt="" title="" />
+										<img src="{{asset('frontend/lab/images/s1.jpg')}}" alt="" title="" />
 
 										<div class="video_trigger_wrapper">
 											<div class="adbox_container">

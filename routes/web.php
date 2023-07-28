@@ -21,7 +21,6 @@ Route::group(['middleware' => 'Maintenance'], function () {
     Route::get('/service/{id}/', 'App\Http\Controllers\PagesController@service');
     Route::get('/news', 'App\Http\Controllers\PagesController@news');
     Route::get('/new/{id}/', 'App\Http\Controllers\PagesController@new');
-    Route::get('/clients', 'App\Http\Controllers\PagesController@clients');
     Route::get('/contact', 'App\Http\Controllers\PagesController@contact');
     Route::get('/jobs', 'App\Http\Controllers\PagesController@jobs');
     Route::get('/images', 'App\Http\Controllers\PagesController@images');

@@ -11,6 +11,7 @@ use App\Models\SocialMedia;
 use App\Models\News;
 use App\Models\Photo;
 use App\Models\Video;
+use App\Models\Team;
 
 class PagesController extends Controller
 {
@@ -20,9 +21,10 @@ class PagesController extends Controller
         $services= Service::where('active', '1')->get();
         $news= News::where('active', '1')->take(4)->get();
         $customers= Customer::where('show', '1')->get();
+        $teams= Team::where('active', '1')->get();
         $socialMedia= SocialMedia::where('active', '1')->get();
 
-        return view('frontend.home', compact('setting', 'services', 'customers', 'socialMedia','news'));
+        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','socialMedia','news'));
     }
 
 
@@ -67,25 +69,16 @@ class PagesController extends Controller
         return view('frontend.news', compact('setting', 'socialMedia', 'news', 'services'));
     }
 
-    public function clients()
-    {
-        $setting= Setting::first();
-        $socialMedia= SocialMedia::where('active', '1')->get();
-        $customers= Customer::where('show', '1')->get();
-        $services= Service::where('active', '1')->get();
-
-        return view('frontend.clients', compact('setting', 'socialMedia', 'customers', 'services'));
-    }
-
 
     public function new($id)
     {
         $setting= Setting::first();
         $socialMedia= SocialMedia::all();
         $new = News::find($id);
+        $news= News::where('active', '1')->get();
         $services= Service::where('active', '1')->get();
 
-        return view('frontend.new_item', compact('setting', 'socialMedia', 'new', 'services'));
+        return view('frontend.new_item', compact('setting', 'socialMedia', 'new', 'news','services'));
     }
 
 

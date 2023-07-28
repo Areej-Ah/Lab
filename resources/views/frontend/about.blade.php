@@ -28,9 +28,7 @@
 										<div class="content">
 											<p>
                                                 <div style="text-align: justify;">
-                                                    Confirmation Lab is a laboratory that provides accurate and reliable testing services for food and water in Saudi Arabia. The laboratory is staffed with highly qualified professionals and equipped with state-of-the-art technology to ensure the quality and safety of products that consumers buy and consume.
-													Confirmation Lab provides a variety of testing services for food and water including microbiological testing, chemical analysis. The laboratory also offers technical support and consultation services to help clients understand their testing results and make informed decisions about their products.
-													Whether you are a food, beverage and watermanufacturer, importer, exporter, or distributor, Confirmation Lab is committed to ensure and check that your products meet the highest standards of quality and safety. The laboratory strives for excellence to provide cost-effective testing and support services to its clients, making it a trusted partner for food and water testing in Saudi Arabia.
+                                                 {{$setting->about_en}}
 
                                                 </div>
 											</p>
@@ -45,10 +43,7 @@
 										<div class="content">
 											<p>
                                                 <div style="text-align: justify;">
-                                                   Our Quality Policy is to carry out laboratory activities in a competent, impartial, confidential, and consistent manner that ensures the validity of results and continual improvement in the performance of the LMS. We also aim to comply with customers and regulatory authorities.
-													To achieve this, all supervisors are responsible for ensuring that their employees are trained in approved work procedures to obtain optimal output without errors or omissions. They must also ensure that employees follow laboratory methods and related regulations.
-													All personnel are required to support the LMS and make improvement part of their daily routine. They must also ensure that they are following valid work methods. All personnel will be held accountable for implementing the LMS.
-													Our program incorporates all relevant laws and regulations.
+                                                {{$setting->quality_policy_en}}
 
                                                 </div>
 											</p>
@@ -63,7 +58,7 @@
 										<div class="content">
 											<p>
 												<div style="text-align: justify;">
-                                                    We are committed to continually improving the LMS to provide excellent laboratory testing and calibration services that consistently comply with current legislation and regulations, at the best possible cost, and delivered in a timely manner.
+                                                {{$setting->objective_en}}
                                                 </div>
 											</p>
 										</div>
@@ -76,9 +71,7 @@
 									<div id="acc16" class="collapse ">
 										<div class="content">
 								            <p  style="text-align: justify;">
-                                                 Our mission is to provide world-class laboratory services at a low cost, while remaining a prime services. To achieve this, we empower our workforce and utilize our resources to offer competitive and innovative services to our customers. Additionally, we aim to create positive, long-term social, cultural, and economic benefits for the region, including our employees, customers, suppliers, and interested parties.
-												We recognize our important responsibilities to the community for essential laboratory services. Therefore, we support responsible stewardship of qulaity in the workplace, and we strive for continual improvement in our processes to enable sustained economic development and an improved quality of life.
-												Our commitment is to provide "impartial, confidential, and valid results" to our customers.
+                                            {{$setting->corporate_mission_en}}
 											</p>
 										</div>
 									</div>

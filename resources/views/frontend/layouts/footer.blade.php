@@ -6,12 +6,12 @@
 							<h3 class="title m_title">MENU</h3>
 							<div class="sbs">
 								<ul class="menu">
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Our Services</a></li>
-									<li><a href="#">Our News</a></li>
+									<li><a href="{{ url ('/about') }}">About us</a></li>
+									<li><a href="{{ url ('/services') }}">Our Services</a></li>
+									<li><a href="{{ url ('/news') }}">Our News</a></li>
 									<li><a href="#">Our Gallery</a></li>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Contact Us</a></li>
+									<li><a href="{{ url ('/jobs') }}">Jobs</a></li>
+									<li><a href="{{ url ('/contact') }}">Contact Us</a></li>
 								</ul>
 							</div>
 						</div>
@@ -20,10 +20,9 @@
 					<div class="col-sm-4">
 						<div>
 							<h3 class="title m_title">GET IN TOUCH</h3>
-							<div class="contact-details"><p><strong>T (00966) 555 55 00</strong><br>
-								Email: <a href="#">info@confirmation-lab.com</a></p>
-								<p>Saudi Arabia<br>
-								Riyadh</p>
+							<div class="contact-details"><p><strong>{!! $setting->mobile !!}</strong><br>
+								Email: <a href="#">{!! $setting->email !!}</a></p>
+								<p> {!! $setting->location !!}</p>
 								<p><a href="http://goo.gl/maps/1OhOu" target="_blank"><i class="icon-map-marker icon-white"></i> Open in Google Maps</a></p>
 							</div>
 						</div>
@@ -35,14 +34,14 @@
 						<div class="bottom clearfix">
 							<ul class="social-icons sc--clean clearfix">
 								<li class="title">GET SOCIAL</li>
-								<li><a href="#" target="_self" class="icon-facebook" title="Facebook"></a></li>
-								<li><a href="#" target="_self" class="icon-twitter" title="Twitter"></a></li>
-								<li><a href="#" target="_blank" class="icon-instagram" title="Instagram"></a></li>
+                                @foreach($socialMedia as $item)
+								<li><a href="{{ $item->link }}" target="_blank" class="icon-{{$item->icon}}"></a></li>
+                                @endforeach
 							</ul>
 
 							<div class="copyright">
 								<a href="index.html">
-									<img style="width: 100px; height: auto;" src="images/logo2.png" alt="Confirmation lab">
+									<img style="width: 100px; height: auto;" src="{{ Storage::url(setting()->logo) }}" alt="Confirmation lab">
 								</a>
 								<p>© 2023 All rights reserved</p>
 							</div>

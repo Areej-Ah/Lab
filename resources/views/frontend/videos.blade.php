@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 						<div class="row">
-
+                            @foreach($videos as $video)
 							<div class="col-sm-4">
 								<div class="portfolio-item kl-has-overlay">
 									<div class="img-intro">
@@ -20,103 +20,14 @@
 
 									<div class="portfolio-entry">
 										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Video title</a>
+											<a href="{{asset('frontend/lab/images/n1.jpg')}}" data-type="image" data-lightbox="image" class="hoverLink" title="">{!! $video->{'title_'.session('lang')} !!}</a>
 										</h3>
 									</div>
 								</div>
 							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<div class="kb-video-container">
-											<div class="video-container">
-												<iframe src="https://www.youtube.com/embed/WN_VGtBAmOM" frameborder="0" allowfullscreen=""></iframe>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Video title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<div class="kb-video-container">
-											<div class="video-container">
-												<iframe src="https://www.youtube.com/embed/WN_VGtBAmOM" frameborder="0" allowfullscreen=""></iframe>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Video title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
+                            @endforeach
 
 							<div class="clear">
-							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<div class="kb-video-container">
-											<div class="video-container">
-												<iframe src="https://www.youtube.com/embed/WN_VGtBAmOM" frameborder="0" allowfullscreen=""></iframe>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Video title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<div class="kb-video-container">
-											<div class="video-container">
-												<iframe src="https://www.youtube.com/embed/WN_VGtBAmOM" frameborder="0" allowfullscreen=""></iframe>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Video title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<div class="kb-video-container">
-											<div class="video-container">
-												<iframe src="https://www.youtube.com/embed/WN_VGtBAmOM" frameborder="0" allowfullscreen=""></iframe>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Video title</a>
-										</h3>
-									</div>
-								</div>
 							</div>
 
 

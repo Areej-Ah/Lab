@@ -7,13 +7,13 @@
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 						<div class="row">
-
+                            @foreach($images as $image)
 							<div class="col-sm-4">
 								<div class="portfolio-item kl-has-overlay">
 									<div class="img-intro">
-										<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
+										<a href="{{ Storage::url($image->image) }}" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
 
-										<img src="images/n1.jpg" class="img-responsive" title="Image title" alt="Image title" />
+										<img src="{{ Storage::url($image->image) }}" class="img-responsive" title="Image title" alt="Image title" />
 
 										<div class="overlay">
 											<div class="overlay-inner">
@@ -24,124 +24,25 @@
 
 									<div class="portfolio-entry">
 										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
+											<a href="{{ Storage::url($image->image) }}" data-type="image" data-lightbox="image" class="hoverLink" title="">{!! $image->{'title_'.session('lang')} !!}</a>
 										</h3>
 									</div>
 								</div>
 							</div>
+                            @endforeach
 
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
 
-										<img src="images/n2.jpg" class="img-responsive" title="Image title" alt="Image title" />
 
-										<div class="overlay">
-											<div class="overlay-inner">
-												<span class="glyphicon glyphicon-picture"></span>
-											</div>
-										</div>
-									</div>
 
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
-
-										<img src="images/n3.jpg" class="img-responsive" title="Image title" alt="Image title" />
-
-										<div class="overlay">
-											<div class="overlay-inner">
-												<span class="glyphicon glyphicon-picture"></span>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
 
 							<div class="clear">
 							</div>
 
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
 
-										<img src="images/n1.jpg" class="img-responsive" title="Image title" alt="Image title" />
 
-										<div class="overlay">
-											<div class="overlay-inner">
-												<span class="glyphicon glyphicon-picture"></span>
-											</div>
-										</div>
-									</div>
 
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n1.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
 
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
 
-										<img src="images/n2.jpg" class="img-responsive" title="Image title" alt="Image title" />
-
-										<div class="overlay">
-											<div class="overlay-inner">
-												<span class="glyphicon glyphicon-picture"></span>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n2.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="portfolio-item kl-has-overlay">
-									<div class="img-intro">
-										<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="Image title"></a>
-
-										<img src="images/n3.jpg" class="img-responsive" title="Image title" alt="Image title" />
-
-										<div class="overlay">
-											<div class="overlay-inner">
-												<span class="glyphicon glyphicon-picture"></span>
-											</div>
-										</div>
-									</div>
-
-									<div class="portfolio-entry">
-										<h3 class="title">
-											<a href="images/n3.jpg" data-type="image" data-lightbox="image" class="hoverLink" title="">Image title</a>
-										</h3>
-									</div>
-								</div>
-							</div>
 
 
 						</div>

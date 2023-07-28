@@ -17,20 +17,20 @@
 									<div class="col-sm-4">
 										<h4 class="m_title">Call</h4>
 										<div class="m_content">
-										   <a href="tel:0096650656565">0096650656565</a> <br/>
-										   <a href="tel:0096650656565">0096650656565</a>
+										   <a href="tel:0096650656565">{!! $setting->phone !!}</a> <br/>
+										   <a href="tel:0096650656565">{!! $setting->mobile !!}</a>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<h4 class="m_title">Email</h4>
 										<div class="m_content">
-										   <a href="mailto:jobs@jobs.com>">jobs@jobs.com</a>
+										   <a href="mailto:jobs@jobs.com>">{!! $setting->employment_email !!}</a>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<h4 class="m_title">Address</h4>
 										<div class="m_content">
-											Saudi Arabia - Ryiadh
+                                        {!! $setting->location !!}
 										</div>
 										<br/>
 									</div>
