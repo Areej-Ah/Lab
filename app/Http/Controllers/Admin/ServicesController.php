@@ -48,6 +48,7 @@ class ServicesController extends Controller
             'description_ar' =>'required',
             'description_en' =>'required',
             'icon'           => 'sometimes|nullable|'.validate_image(),
+            'image'  => 'sometimes|nullable|'.validate_image(),
             'active'  => 'required',
 
         ],[],[
@@ -57,6 +58,7 @@ class ServicesController extends Controller
             'description_ar' => trans('admin.description_ar'),
             'description_en' => trans('admin.description_en'),
             'icon'    => trans('admin.icon'),
+            'image'    => trans('admin.image'),
             'active'    => trans('admin.active'),
         ]
 
@@ -68,7 +70,19 @@ class ServicesController extends Controller
 
 			    //	'new_name'    => '',
 				'file'        => 'icon',
-				'path'        => 'services',
+				'path'        => 'public/services',
+                'upload_type' => 'single',
+                'delete_file' => '',
+			]);
+		}
+
+        if(request()->hasFile('image'))
+		{
+			$data['image']=up()->upload([
+
+			    //	'new_name'    => '',
+				'file'        => 'image',
+				'path'        => 'public/services',
                 'upload_type' => 'single',
                 'delete_file' => '',
 			]);
@@ -107,6 +121,7 @@ class ServicesController extends Controller
             'description_ar' =>'required',
             'description_en' =>'required',
             'icon'    => 'sometimes|nullable|'.validate_image(),
+            'image'    => 'sometimes|nullable|'.validate_image(),
             'active' => 'required',
 
         ],[],[
@@ -116,6 +131,7 @@ class ServicesController extends Controller
             'description_ar' => trans('admin.description_ar'),
             'description_en' => trans('admin.description_en'),
             'icon'    => trans('admin.icon'),
+            'image'    => trans('admin.image'),
             'active'    => trans('admin.active'),
         ]
 
@@ -127,9 +143,21 @@ class ServicesController extends Controller
 
 			    //	'new_name'    => '',
 				'file'        => 'icon',
-				'path'        => 'public/services',
+				'path'        => 'services',
                 'upload_type' => 'single',
                 'delete_file' => Service::find($service->id)->icon
+			]);
+		}
+
+        if(request()->hasFile('image'))
+		{
+			$data['image']=up()->upload([
+
+			    //	'new_name'    => '',
+				'file'        => 'image',
+				'path'        => 'services',
+                'upload_type' => 'single',
+                'delete_file' => Service::find($service->id)->image
 			]);
 		}
 
@@ -144,6 +172,7 @@ class ServicesController extends Controller
     public function destroy(Service $service)
     {
         Storage::delete($service->icon);
+        Storage::delete($service->image);
         $service->delete();
         session()->flash('success',trans('admin.record_deleted'));
         return redirect(aurl('services'));
@@ -160,6 +189,7 @@ class ServicesController extends Controller
              {
                 $service=Service::find($id);
                 Storage::delete($service->icon);
+                Storage::delete($service->image);
                 $service->delete();
              }
         }
@@ -167,6 +197,7 @@ class ServicesController extends Controller
         {
             $service=Service::find(request('item'));
             Storage::delete($service->icon);
+            Storage::delete($service->image);
             $service->delete();
         }
 

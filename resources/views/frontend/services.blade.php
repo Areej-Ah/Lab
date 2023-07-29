@@ -23,6 +23,7 @@
         <section class="hg_section bg-white">
 			<div class="container">
 				<div class="row">
+                    @foreach($services as $service)
 					<div class="col-md-6 col-sm-6">
 						<div class="services_box services_box--boxed sb--hasicon">
 							<div class="services_box__inner clearfix">
@@ -30,18 +31,18 @@
 									<div class="kl-iconbox__inner">
 										<div class="kl-iconbox__icon-wrapper ">
 											<span class="kl-iconbox__icon">
-												<img class="kl-iconbox__icon small" src="images/_niches/dental/d2.png" alt="Microbiology Department">
+												<img class="kl-iconbox__icon small" src="{{ Storage::url($service->icon) }}" alt="Microbiology Department">
 											</span>
 										</div>
 									</div>
 								</div>
 
 								<div class="services_box__content">
-									<h4 class="services_box__title">Microbiology Department</h4>
+									<h4 class="services_box__title">{!! $service->name_en !!}</h4>
 
 									<div class="services_box__desc">
 										<p>
-											Our microbiology laboratory have the expertise and capabilities to test ingredients, in-process and finish products. A variety of methods are available to meet your specifications, ensuring safe food, beverage and water.
+                                        {!! $service->description_en !!}
 										</p>
 									</div>
 
@@ -58,42 +59,7 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-6 col-sm-6">
-						<div class="services_box services_box--boxed sb--hasicon">
-							<div class="services_box__inner clearfix">
-								<div class="kl-iconbox kl-iconbox--type-icon kl-iconbox--sh kl-iconbox--sh-circle">
-									<div class="kl-iconbox__inner">
-										<div class="kl-iconbox__icon-wrapper ">
-											<span class="kl-iconbox__icon">
-												<img class="kl-iconbox__icon small" src="images/_niches/dental/d1.png" alt="Chemistry Department">
-											</span>
-										</div>
-									</div>
-								</div>
-
-								<div class="services_box__content">
-									<h4 class="services_box__title">Chemistry Department</h4>
-
-									<div class="services_box__desc">
-										<p>
-											Our Chemistry Lab offers a variety of chemical testing services for food, feed, beverages, and water. Our highly trained personnel use the latest technology to conduct analyses using both standard and in-house developed.
-										</p>
-									</div>
-
-									<div class="services_box__list-wrapper">
-										<span class="services_box__list-bg"></span>
-										<!-- List with custom padding top-->
-										<ul class="services_box__list" style="padding-top: 300px;">
-											<li><span class="services_box__list-text">Report Title </span></li>
-											<li><span class="services_box__list-text">Report Title </span></li>
-											<li><span class="services_box__list-text">Report Title </span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    @endforeach
 				</div>
 			</div>
 		</section>

@@ -12,6 +12,7 @@ use App\Models\News;
 use App\Models\Photo;
 use App\Models\Video;
 use App\Models\Team;
+use App\Models\SubService;
 
 class PagesController extends Controller
 {
@@ -22,9 +23,10 @@ class PagesController extends Controller
         $news= News::where('active', '1')->take(4)->get();
         $customers= Customer::where('show', '1')->get();
         $teams= Team::where('active', '1')->get();
+        $subs = SubService::where('active', '1')->get();
         $socialMedia= SocialMedia::where('active', '1')->get();
 
-        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','socialMedia','news'));
+        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','subs','socialMedia','news'));
     }
 
 
@@ -43,13 +45,13 @@ class PagesController extends Controller
         $setting= Setting::first();
         $socialMedia= SocialMedia::where('active', '1')->get();
         $services= Service::where('active', '1')->get();
-
         return view('frontend.services', compact('setting', 'socialMedia', 'services'));
     }
 
 
     public function service($id)
     {
+
         $setting= Setting::first();
         $socialMedia= SocialMedia::where('active', '1')->get();
         $service = Service::find($id);
