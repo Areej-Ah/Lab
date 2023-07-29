@@ -110,8 +110,10 @@
 						<li><a href="{{ url ('/about') }}">About Us</a></li>
 						<li class="menu-item-has-children"><a href="{{ url ('/services') }}">Our Services</a>
 							<ul class="sub-menu clearfix">
-								<li><a href="service.html">Service Title</a></li>
-								<li><a href="service.html">Service Title</a></li>
+                                @foreach($subs as $sub)
+								<li><a href="/service/{{ $sub->id}}">{!! $sub->title_en !!}</a></li>
+                                @endforeach
+
 							</ul>
 						</li>
 						<li><a href="{{ url ('/news') }}">Our News</a></li>

@@ -115,34 +115,24 @@
 		<section class="hg_section bg-white">
 			<div class="container">
 				<div class="row">
+                    @foreach($services as $service)
 					<div class="col-md-6 col-sm-6">
 						<div class="box image-boxes imgboxes_style4 kl-title_style_bottom">
 							<a class="imgboxes4_link imgboxes-wrapper" href="service.html" target="_self">
-								<img src="{{asset('frontend/lab/images/s1.jpg')}}" alt="Microbiology Department" title="Microbiology Department" class="img-responsive imgbox_image cover-fit-img">
+								<img src="{{ Storage::url($service->image) }}" alt="Microbiology Department" title="{{$service->name_en}}" class="img-responsive imgbox_image cover-fit-img">
 
 								<span class="imgboxes-border-helper"></span>
 
-								<h3 class="m_title imgboxes-title">Microbiology Department </h3>
+								<h3 class="m_title imgboxes-title">{!! $service->name_en !!} </h3>
 							</a>
 
-							<p>Our microbiology laboratory have the expertise and capabilities to test ingredients, in-process and finish products. A variety of methods are available to meet your specifications, ensuring safe food, beverage and water. </p>
+							<p>{!! $service->description_en !!} </p>
 						</div>
 					</div>
+                    @endforeach
 
 
-					<div class="col-md-6 col-sm-6">
-						<div class="box image-boxes imgboxes_style4 kl-title_style_bottom">
-							<a class="imgboxes4_link imgboxes-wrapper" href="service.html" target="_self">
-								<img src="{{asset('frontend/lab/images/s2.jpg')}}" alt="Chemistry Department" title="Chemistry Department" class="img-responsive imgbox_image cover-fit-img">
 
-								<span class="imgboxes-border-helper"></span>
-
-								<h3 class="m_title imgboxes-title">Chemistry Department </h3>
-							</a>
-
-							<p>Our Chemistry Lab offers a variety of chemical testing services for food, feed, beverages, and water.</p>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>

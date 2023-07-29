@@ -1,48 +1,87 @@
-@extends('frontend.index')
-
+@extends('frontend.index2')
+@section('page_name','OUR SERVICES')
 @section('content')
 
-<section class="no-padding one-half-screen position-relative">
-    <div class="opacity-full bg-gradient-fast-blue-purple z-index-0"></div>
-    <div class="container h-100">
-        <div class="row align-items-end justify-content-center h-100">
-            <div class="col-12 col-xl-6 col-lg-7 col-md-10 position-relative page-title-large text-center">
-                <span class="margin-15px-bottom alt-font  text-extra-large text-white d-block">{!! trans('admin.intro') !!}</span>
-                <h1 class="text-white alt-font font-weight-500
-                           margin-5-rem-bottom sm-margin-3-rem-bottom">
-                           {!! $service->{'name_'.session('lang')} !!}
-                </h1>
-                <span class="w-1px h-80px d-inline-block
-                            bg-white margin-5-rem-bottom sm-margin-3-rem-bottom sm-h-50px"></span>
-            </div>
-        </div>
-    </div>
-    <video loop="" autoplay="" controls="" muted class="html-video" poster="https://via.placeholder.com/1920x1080">
-        <source type="video/mp4" src="{{ url ('frontend/sadu/video/video.mp4') }}" />
-    </video>
-</section>
+<section class="hg_section  ptop-65 pbottom-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="row hg-portfolio-item">
+							<div class="col-sm-12 col-md-7">
+								<div class="portfolio-item-content">
+									<h1 class="page-title portfolio-item-title">Microbiology Department </h1>
 
+									<div class="portfolio-item-desc">
+										<div class="portfolio-item-desc-inner">
+											<p>
+												Our microbiology laboratory have the expertise and capabilities to test ingredients, in-process and finish products. A variety of methods are available to meet your specifications, ensuring safe food, beverage and water. We offer a wide range of microbiology testing, using both reference and alternative methodologies, and have an experienced team to carry out these tests.
+											</p>
+										</div>
 
-<section class="half-section bg-light-gray">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-                <h6 class="alt-font font-weight-600
-                           text-extra-dark-gray w-95">{!! $service->{'name_'.session('lang')} !!}</h6>
-                <p class="w-80 lg-w-95">
-                    {!! $service->description_ar !!}
-                </p>
-            </div>
-            <div class="col-12 col-lg-7 col-md-9 padding-55px-lr sm-padding-5px-right md-padding-50px-left">
-                <figure class="image-back-offset-shadow position-left w-100">
-                    <img class="border-radius-6px" src="{{ Storage::url($service->icon) }}" alt=""/>
-                    <span class="bg-gradient-magenta-orange-2 border-radius-6px overlay"></span>
-                </figure>
-            </div>
-        </div>
-    </div>
-</section>
+										<a href="#" class="portfolio-item-more-toggle js-toggle-class" data-target=".portfolio-item-desc" data-target-class="is-opened" data-more-text="see more" data-less-text="show less">
+											<span class="glyphicon glyphicon-menu-down"></span>
+										</a>
+									</div>
 
+									<div class="mb-30 clearfix">
+
+										<ul class="fancy-list fs-normal pull-left w-50 w-md-100 ml-0">
+											<li>Reprot Title</li>
+											<li>Reprot Title</li>
+											<li>Reprot Title</li>
+										</ul>
+										<ul class="fancy-list fs-normal pull-left w-50 w-md-100 ml-0">
+											<li>Reprot Title</li>
+											<li>Reprot Title</li>
+											<li>Reprot Title</li>
+										</ul>
+									</div>
+
+									<div class="portfolio-item-otherdetails clearfix">
+										<div class="portfolio-item-share clearfix" data-share-title="SHARE:">
+											<a href="https://twitter.com/intent/tweet?text=Check+out+-+Progressively+harness&amp;url=http%3A%2F%2Fhogash-demo.com%2Fdemo%2Fkwp%2Fportfolio%2Fprogressively-harness%2F%3Futm_source%3Dsharetw" title="SHARE ON TWITTER" class=" portfolio-item-share-twitter">
+												<span class="icon-twitter"></span>
+											</a>
+											<a href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u=http%3A%2F%2Fhogash-demo.com%2Fdemo%2Fkwp%2Fportfolio%2Fprogressively-harness%2F%3Futm_source%3Dsharefb" title="SHARE ON FACEBOOK" class=" portfolio-item-share-facebook">
+												<span class="icon-facebook"></span>
+											</a>
+											<a href="https://plus.google.com/share?url=http%3A%2F%2Fhogash-demo.com%2Fdemo%2Fkwp%2Fportfolio%2Fprogressively-harness%2F%3Futm_source%3Dsharegp" title="SHARE ON GPLUS" class=" portfolio-item-share-gplus">
+												<span class="icon-gplus"></span>
+											</a>
+											<a href="http://pinterest.com/pin/create/button?description=Check+out+-+Progressively+harness&amp;url=http%3A%2F%2Fhogash-demo.com%2Fdemo%2Fkwp%2Fportfolio%2Fprogressively-harness%2F%3Futm_source%3Dsharepi" title="SHARE ON PINTEREST" class=" portfolio-item-share-pinterest">
+												<span class="icon-pinterest"></span>
+											</a>
+											<a href="mailto:?body=You can see it live here http%3A%2F%2Fhogash-demo.com%2Fdemo%2Fkwp%2Fportfolio%2Fprogressively-harness%2F%3Futm_source%3Dsharemail . Made by Kallyas Demo http://hogash-demo.com/demo/kwp&amp;subject=Check out this awesome project: Progressively harness" title="SHARE ON MAIL" class=" portfolio-item-share-mail">
+												<span class="glyphicon glyphicon-envelope"></span>
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-12 col-md-5">
+								<div class="portfolio-item-right mfp-gallery images">
+									<a href="images/ptf1.png" class="hoverLink" data-lightbox="mfp" data-mfp="image" title="Progressively harness" >
+										<span class="hoverBorderWrapper">
+											<img src="images/ptf1-700x525.png" class="img-responsive" alt="" title="" />
+
+											<span class="theHoverBorder"></span>
+										</span>
+									</a>
+
+								</div>
+							</div>
+
+							<div class="clearfix">
+							</div>
+						</div>
+
+						<div class="hg_separator clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 @endsection

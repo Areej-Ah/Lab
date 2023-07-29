@@ -10,17 +10,38 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-    {!! Form::open(['url' => aurl('services'),'files'=>true]) !!}
+    {!! Form::open(['url' => aurl('sub_services'),'files'=>true]) !!}
 
         <div class="form-group">
-            {!! Form::label('name_ar', trans('admin.name_ar')) !!}
-            {!! Form::text('name_ar',old('name_ar'),['class'=>'form-control']) !!}
+            {!! Form::label('title_ar', trans('admin.title_ar')) !!}
+            {!! Form::text('title_ar',old('title_ar'),['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
-          {!! Form::label('name_en', trans('admin.name_en')) !!}
-          {!! Form::text('name_en',old('name_en'),['class'=>'form-control']) !!}
+          {!! Form::label('title_en', trans('admin.title_en')) !!}
+          {!! Form::text('title_en',old('title_en'),['class'=>'form-control']) !!}
         </div>
+
+        <div class="form-group">
+          {!! Form::label('department_ar', trans('admin.department_ar')) !!}
+            <select  name="service_id" id="service_id">
+                <option disapled>department</option>
+                @foreach($services as $service)
+                <option value="{{ $service->id}}">{{ $service->name_ar}}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="form-group">
+          {!! Form::label('department_en', trans('admin.department_en')) !!}
+            <select  name="service_id" id="service_id">
+                <option disapled>department</option>
+                @foreach($services as $service)
+                <option value="{{ $service->id}}">{{ $service->name_en}}</option>
+                @endforeach
+            </select>
+        </div>
+
 
         <div class="form-group">
             {!! Form::label('description_ar', trans('admin.description_ar')) !!}
@@ -39,11 +60,11 @@
 
 
         <div class="form-group">
-          <label for="exampleInputFile">{{ trans('admin.icon') }}</label>
+          <label for="exampleInputFile">{{ trans('admin.file') }}</label>
           <div class="input-group">
             <div class="custom-file">
-              {!! Form::label('icon',trans('admin.icon'),['class'=>'custom-file-label']) !!}
-              {!! Form::file('icon',['class'=>'custom-file-input']) !!}
+              {!! Form::label('file',trans('admin.file'),['class'=>'custom-file-label']) !!}
+              {!! Form::file('file',['class'=>'custom-file-input']) !!}
 
             </div>
           </div>
