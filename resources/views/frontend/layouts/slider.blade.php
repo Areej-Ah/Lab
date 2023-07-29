@@ -11,32 +11,9 @@
 
 			<div class="iosSlider kl-slideshow-inner animateme" data-trans="6000" data-autoplay="1" data-infinite="true" data-when="span" data-from="0" data-to="0.75" data-translatey="300" data-easing="linear">
 				<div class="kl-iosslider hideControls">
+					@foreach($sliders as $slider)
 					<div class="item iosslider__item">
-						<div class="slide-item-bg" style="background-image:url(frontend/lab/images/s2.jpg);">
-						</div>
-
-						<div class="kl-slide-overlay" style="background:rgba(32,55,152,0.4); background: -moz-linear-gradient(left, rgba(32,55,152,0.4) 0%, rgba(17,93,131,0.25) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(32,55,152,0.4)), color-stop(100%,rgba(17,93,131,0.25))); background: -webkit-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -o-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -ms-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: linear-gradient(to right, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); ">
-						</div>
-
-						<div class="container kl-iosslide-caption kl-ioscaption--style5 fromleft klios-alignleft kl-caption-posv-middle">
-							<div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
-								<h2 class="main_title has_titlebig "><span>CONFIRMATION LAB</span></h2>
-
-								<h3 class="title_big">Food and Beverages Testing</h3>
-
-								<div class="more">
-									<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">ABOUT US</a>
-
-									<a class="btn btn-lined " href="{{ url ('/contact') }}" target="_self">CONTACT US</a>
-								</div>
-
-
-							</div>
-						</div>
-					</div>
-
-					<div class="item iosslider__item">
-						<div class="slide-item-bg" style="background-image:url(frontend/lab/images/s1.jpg);">
+						<div class="slide-item-bg" style="background-image:url({{ Storage::url($slider->image) }});">
 						</div>
 
 						<div class="kl-slide-overlay" style="background:rgba(32,55,152,0.4); background: -moz-linear-gradient(left, rgba(32,55,152,0.4) 0%, rgba(17,93,131,0.25) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(32,55,152,0.4)), color-stop(100%,rgba(17,93,131,0.25))); background: -webkit-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -o-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: -ms-linear-gradient(left, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); background: linear-gradient(to right, rgba(32,55,152,0.4) 0%,rgba(17,93,131,0.25) 100%); ">
@@ -58,6 +35,7 @@
 							</div>
 						</div>
 					</div>
+                    @endforeach
 
 				</div>
 

@@ -13,6 +13,7 @@ use App\Models\Photo;
 use App\Models\Video;
 use App\Models\Team;
 use App\Models\SubService;
+use App\Models\Slider;
 
 class PagesController extends Controller
 {
@@ -24,9 +25,10 @@ class PagesController extends Controller
         $customers= Customer::where('show', '1')->get();
         $teams= Team::where('active', '1')->get();
         $subs = SubService::where('active', '1')->get();
+        $sliders = Slider::where('active', '1')->get();
         $socialMedia= SocialMedia::where('active', '1')->get();
 
-        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','subs','socialMedia','news'));
+        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','subs','sliders','socialMedia','news'));
     }
 
 
