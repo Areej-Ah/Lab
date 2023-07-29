@@ -89,7 +89,19 @@
   </div>
 
 
+@endsection
 
-
-
+@section('scripts')
+    <script>
+      $('.summernote_description_ar').summernote({
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+  <script>
+      $('.summernote_description_en').summernote({
+        tabsize: 2,
+        height: 100
+      });
+    </script>
 @endsection

@@ -36,7 +36,7 @@
 
         <div class="form-group">
         {!! Form::label('activation', trans('admin.activation')) !!}
-        {!! Form::select('active', ['1' => trans('admin.active'), '0' => trans('admin.inactive')],$service->active,['class'=>'form-control']) !!}
+        {!! Form::select('active', ['1' => trans('admin.active'), '0' => trans('admin.inactive')],$subService->active,['class'=>'form-control']) !!}
        </div>
 
 
@@ -90,14 +90,14 @@
 
     <script>
       $('.summernote_description_ar').summernote({
-        placeholder: '{{$service->description_ar}}',
+        placeholder: '{{$subService->description_ar}}',
         tabsize: 2,
         height: 100
       });
     </script>
   <script>
       $('.summernote_description_en').summernote({
-        placeholder: '{{$service->description_en}}',
+        placeholder: '{{$subService->description_en}}',
         tabsize: 2,
         height: 100
       });

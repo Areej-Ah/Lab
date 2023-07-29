@@ -28,7 +28,7 @@
 										<div class="content">
 											<p>
                                                 <div style="text-align: justify;">
-                                                 {{$setting->about_en}}
+                                                {!! $setting->{'about_'.session('lang')} !!}
 
                                                 </div>
 											</p>
@@ -43,7 +43,7 @@
 										<div class="content">
 											<p>
                                                 <div style="text-align: justify;">
-                                                {{$setting->quality_policy_en}}
+                                                {!! $setting->{'quality_policy_'.session('lang')} !!}
 
                                                 </div>
 											</p>
@@ -58,7 +58,7 @@
 										<div class="content">
 											<p>
 												<div style="text-align: justify;">
-                                                {{$setting->objective_en}}
+                                                {!! $setting->{'objective_'.session('lang')} !!}
                                                 </div>
 											</p>
 										</div>
@@ -71,7 +71,7 @@
 									<div id="acc16" class="collapse ">
 										<div class="content">
 								            <p  style="text-align: justify;">
-                                            {{$setting->corporate_mission_en}}
+                                            {!! $setting->{'corporate_mission_'.session('lang')} !!}
 											</p>
 										</div>
 									</div>
@@ -83,11 +83,7 @@
 									<div id="acc17" class="collapse ">
 										<div class="content">
 								            <p  style="text-align: justify;">
-                                                 Vision: Our goal is to be a top choice for clients who require accurate, precise, and timely analysis, inspection, diagnosis, and consultancy services.
-												<br/>
-												Mission: Our mission is to offer cost-effective testing and support services to our clients.
-												<br/>
-												Services: We are dedicated to satisfying our customers through the services we provide.
+                                            {!! $setting->{'vision_'.session('lang')} !!}
 											</p>
 										</div>
 									</div>
@@ -133,7 +129,7 @@
 						</div>
 
 						<div class="zn_buttons_element text-left">
-							<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="contact.html" style="margin:0 0 10px 0;"><span>Contact Us</span></a>
+							<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="{{ url ('/contact') }}" style="margin:0 0 10px 0;"><span>Contact Us</span></a>
 						</div>
 					</div>
 				</div>

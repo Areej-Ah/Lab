@@ -44,9 +44,9 @@
 
 						<div class="container kl-iosslide-caption kl-ioscaption--style5 fromleft klios-alignleft kl-caption-posv-middle">
 							<div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
-								<h2 class="main_title has_titlebig "><span>CONFIRMATION LAB</span></h2>
+								<h2 class="main_title has_titlebig "><span>{!! $setting->{'sitename_'.session('lang')} !!}</span></h2>
 
-								<h3 class="title_big">Food and Beverages Testing</h3>
+								<h3 class="title_big">{!! $setting->{'slogan_'.session('lang')} !!}</h3>
 
 								<div class="more">
 									<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">ABOUT US</a>
@@ -103,7 +103,7 @@
 							<div class="action_box_inner">
 								<div class="action_box_content">
 									<div class="ac-content-text">
-										<h4 class="text">Confirmation Lab is a laboratory that provides accurate and reliable testing services for food and water in Saudi Arabia. </h4>
+										<h4 class="text">{!! $setting->{'description_'.session('lang')} !!}</h4>
 									</div>
 
 									<div class="ac-buttons">

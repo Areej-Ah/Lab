@@ -11,7 +11,7 @@
 								<div class="itemContainer">
 									<div class="itemHeader">
 										<h3 class="itemTitle">
-											<a href="#" title="Enthusiastically">{!! $new->title_en !!} </a>
+											<a href="#" title="Enthusiastically">{!! $new->{'title_'.session('lang')} !!}</a>
 										</h3>
 
 										<div class="post_details">
@@ -29,7 +29,7 @@
 												</a>
 											</div>
 											<p>
-                                            {!! $new->text_en !!}
+                                            {!! $new->{'text_'.session('lang')} !!}
 											</p>
 										</div>
 
@@ -76,7 +76,7 @@
 												</span>
 											</a>
 											<h4 class="title">
-												<a href="/new/{{ $new->id}}" title="News Title">{!! $new->title_en !!}</a>
+												<a href="/new/{{ $new->id}}" title="News Title">{!! $new->{'title_'.session('lang')} !!}</a>
 											</h4>
 
 										</li>

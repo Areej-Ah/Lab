@@ -16,7 +16,7 @@
 										<h6>Read more +</h6>
 									</a>
 									<em>{!! $new->created_at->toFormattedDateString() !!} </em>
-									<h3 class="m_title"><a href="/new/{{ $new->id}}">{!! $new->title_en !!}</a></h3>
+									<h3 class="m_title"><a href="/new/{{ $new->id}}">{!! $new->{'title_'.session('lang')} !!}</a></h3>
 								</div>
                                 @endforeach
 
