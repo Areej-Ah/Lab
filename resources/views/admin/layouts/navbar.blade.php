@@ -459,7 +459,7 @@
             <i class="right fas fa-angle-left"></i>
           </p>
         </a>
-        <ul class="nav nav-treeview" style=" {{ active_menu('teams')[1] }} ">
+        <ul class="nav nav-treeview" style=" {{ active_menu('teams')[1] }} "> slider
 
           <li class="nav-item">
             <a href="{{aurl('teams')}}" class="nav-link">

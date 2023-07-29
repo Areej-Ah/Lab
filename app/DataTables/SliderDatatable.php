@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Model\Slider;
+use App\Models\Slider;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
@@ -34,7 +34,7 @@ class SliderDatatable extends DataTable
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Model\Slider $model
+     * @param \App\Models\Slider $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function query()
@@ -53,7 +53,7 @@ class SliderDatatable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->setTableId('Sliderdatatable-table')
+                    ->setTableId('sliderdatatable-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
@@ -116,15 +116,15 @@ class SliderDatatable extends DataTable
             ->data('id')
             ->name('id'),
 
-            Column::make('name_ar')
-            ->title(trans('admin.name_ar'))
-            ->data('name_ar')
-            ->name('name_ar'),
+            Column::make('title_ar')
+            ->title(trans('admin.title_ar'))
+            ->data('title_ar')
+            ->name('title_ar'),
 
-            Column::make('name_en')
-            ->title(trans('admin.name_en'))
-            ->data('name_en')
-            ->name('name_en'),
+            Column::make('title_en')
+            ->title(trans('admin.title_en'))
+            ->data('title_en')
+            ->name('title_en'),
 
             Column::make('created_at')
             ->title(trans('admin.created_at'))

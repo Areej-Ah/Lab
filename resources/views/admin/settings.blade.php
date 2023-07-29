@@ -219,10 +219,6 @@
           {!! Form::textarea('about_en',setting()->about_en,['class'=>'form-control summernote_about_en']) !!}
         </div>
 
-        <div class="form-group">
-          {!! Form::label('about_ar',trans('admin.about_ar')) !!}
-          {!! Form::textarea('about_ar',setting()->about_ar,['class'=>'form-control summernote_about_ar']) !!}
-        </div>
 
         <div class="form-group">
           {!! Form::label('quality_policy_en',trans('admin.quality_policy_en')) !!}
@@ -332,15 +328,51 @@
       });
     </script>
         <script>
-      $('.summernote_team_experinces_en').summernote({
+      $('.summernote_quality_policy_en').summernote({
         tabsize: 2,
         height: 100
       });
     </script>
   <script>
-      $('.summernote_team_experinces_ar').summernote({
+      $('.summernote_quality_policy_ar').summernote({
         tabsize: 2,
         height: 100
       });
-    </script>
+   </script>
+   <script>
+      $('.summernote_corporate_mission_ar').summernote({
+        tabsize: 2,
+        height: 100
+      });
+   </script>
+   <script>
+      $('.summernote_corporate_mission_en').summernote({
+        tabsize: 2,
+        height: 100
+      });
+   </script>
+   <script>
+      $('.summernote_about_en').summernote({
+        tabsize: 2,
+        height: 100
+      });
+   </script>
+   <script>
+      $('.summernote_about_ar').summernote({
+        tabsize: 2,
+        height: 100
+      });
+   </script>
+   <script>
+      $('.summernote_objective_en').summernote({
+        tabsize: 2,
+        height: 100
+      });
+   </script>
+   <script>
+      $('.summernote_objective_ar').summernote({
+        tabsize: 2,
+        height: 100
+      });
+   </script>
 @endsection

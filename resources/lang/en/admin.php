@@ -188,7 +188,10 @@ return [
     'logo_admin'                => 'Logo',
     'slogan_en'                 => 'English Short Description',
     'slogan_ar'                 => 'Arabic Short Description',
-    'employment_email'          => 'Employement Email'
+    'employment_email'          => 'Employement Email',
+    'teams'                     => 'Team',
+    'position_ar'               => 'Position in Arabic',
+    'position_en'               => 'Position in English',
 
 
 
