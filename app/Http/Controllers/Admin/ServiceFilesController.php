@@ -35,7 +35,7 @@ class ServiceFilesController extends Controller
             'title_ar' => 'required',
             'text_ar' => 'nullable',
             'text_en' => 'nullable',
-            'file'    => 'sometimes|nullable|'.validate_image(),
+            'file'    => 'sometimes|nullable|mimes:doc,pdf,docx',
             'service_id' => 'required',
             'active'  => 'required',
 
@@ -96,7 +96,7 @@ class ServiceFilesController extends Controller
             'title_ar' => 'required',
             'text_ar' => 'nullable',
             'text_en' => 'nullable',
-            'file'    => 'sometimes|nullable|'.validate_image(),
+            'file'    => 'sometimes|nullable|mimes:doc,pdf,docx',
             'service_id' => 'required',
             'active'  => 'required',
 
