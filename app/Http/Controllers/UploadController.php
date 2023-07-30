@@ -16,7 +16,7 @@ class UploadController extends Controller
 
         if ( (request()->hasFile($data['file'])) && ($data['upload_type'] == 'single'))
         {
-          Storage::has($data['delete_file'] )?Storage::delete($data['delete_file']):'';
+          !is_null($data['delete_file']) && Storage::has($data['delete_file'] )?Storage::delete($data['delete_file']):'';
           return request()->file($data['file'])->store($data['path']);
         }
 
