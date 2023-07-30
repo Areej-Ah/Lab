@@ -12,7 +12,7 @@
 					"loop": true,
 					"autoplay": true,
 					"muted": true,
-					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}", 
+					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}",
 					"poster":"images/s1.jpg",
 					"video_ratio": "1.7778"
 					}'>
@@ -32,8 +32,8 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<ul class="breadcrumbs fixclear">
-							<li><a href="{{ url ('/') }}">Home</a></li>
-							<li>Our News</li>
+							<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+							<li>{!! trans('admin.news') !!}</li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -41,8 +41,8 @@
 
 					<div class="col-sm-6">
 						<div class="subheader-titles">
-							<h2 class="subheader-maintitle">Our News</h2>
-							<h4 class="subheader-subtitle">GET TO KNOW US BETTER</h4>
+							<h2 class="subheader-maintitle">{!! trans('admin.news') !!}</h2>
+							<h4 class="subheader-subtitle">{!! trans('admin.know_better') !!}</h4>
 						</div>
 					</div>
 				</div>
@@ -133,7 +133,7 @@
 					</div>
 					<div class="widget widget_recent_entries">
 						<div class=" latest_posts style3">
-							<h3 class="widgettitle title">Recent News</h3>
+							<h3 class="widgettitle title">{!! trans('admin.recent_news') !!}</h3>
 							<ul class="posts">
 							@foreach($news as $new)
 								<li class="lp-post">
@@ -156,7 +156,7 @@
 
 
 					<div class="widget widget_categories">
-						<h3 class="widgettitle title">Our Services</h3>
+						<h3 class="widgettitle title">{!! trans('admin.services') !!}</h3>
 						<ul class="menu">
 							@foreach($services as $service)
 								<li class="cat-item"><a href="/service/{{ $service->id}}">{!! $service->{'name_'.session('lang')} !!}</a></li>
@@ -164,14 +164,14 @@
 						</ul>
 					</div>
 					<div class="widget widget_meta">
-						<h3 class="widgettitle title">Our Gallery</h3>
+						<h3 class="widgettitle title">{!! trans('admin.gallery') !!}</h3>
 						<ul>
-							<li><a href="{{ url ('/videos') }}">Video</a></li>
-							<li><a href="{{ url ('/images') }}">Photos</a></li>
+							<li><a href="{{ url ('/videos') }}">{!! trans('admin.video') !!}</a></li>
+							<li><a href="{{ url ('/images') }}">{!! trans('admin.photo') !!}</a></li>
 
 						</ul>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>

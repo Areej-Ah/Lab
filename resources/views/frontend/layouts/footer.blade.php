@@ -3,14 +3,15 @@
 		<div class="row">
 			<div class="col-sm-8">
 				<div>
-					<h3 class="title m_title">MENU</h3>
+					<h3 class="title m_title">{!! trans('admin.menu') !!}</h3>
 					<div class="sbs">
 						<ul class="menu">
-							<li><a href="{{ url ('/about') }}">About us</a></li>
-							<li><a href="{{ url ('/services') }}">Our Services</a></li>
-							<li><a href="{{ url ('/news') }}">Our News</a></li>
-							<li><a href="{{ url ('/jobs') }}">Jobs</a></li>
-							<li><a href="{{ url ('/contact') }}">Contact Us</a></li>
+							<li><a href="{{ url ('/about') }}">{!! trans('admin.about') !!}</a></li>
+							<li><a href="{{ url ('/services') }}">{!! trans('admin.services') !!}</a></li>
+							<li><a href="{{ url ('/news') }}">{!! trans('admin.news') !!}</a></li>
+                            <li><a href="{{ url ('/images') }}">{!! trans('admin.gallery') !!}</a></li>
+							<li><a href="{{ url ('/jobs') }}">{!! trans('admin.jobs') !!}</a></li>
+                            <li><a href="{{ url ('/contact') }}">{!! trans('admin.contact_us') !!}</a></li>
 						</ul>
 					</div>
 				</div>
@@ -18,11 +19,11 @@
 
 			<div class="col-sm-4">
 				<div>
-					<h3 class="title m_title">GET IN TOUCH</h3>
+					<h3 class="title m_title">{!! trans('admin.touch') !!}</h3>
 					<div class="contact-details"><p><strong>{!! $setting->mobile !!}</strong><br>
-						Email: <a href="#">{!! $setting->email !!}</a></p>
+                    {!! trans('admin.email') !!}: <a href="#">{!! $setting->email !!}</a></p>
 						<p> {!! $setting->{'location_'.session('lang')} !!}</p>
-						<p><a href="http://goo.gl/maps/1OhOu" target="_blank"><i class="icon-map-marker icon-white"></i> Open in Google Maps</a></p>
+						<p><a href="http://goo.gl/maps/1OhOu" target="_blank"><i class="icon-map-marker icon-white"></i>{!! trans('admin.open_in_map') !!}</a></p>
 					</div>
 				</div>
 			</div>
@@ -32,7 +33,7 @@
 			<div class="col-sm-12">
 				<div class="bottom clearfix">
 					<ul class="social-icons sc--clean clearfix">
-						<li class="title">GET SOCIAL</li>
+						<li class="title">{!! trans('admin.social') !!}</li>
 						@foreach($socialMedia as $item)
 						<li><a href="{{ $item->link }}" target="_blank" class="icon-{{$item->icon}}"></a></li>
 						@endforeach
@@ -42,7 +43,7 @@
 						<a href="{{ url ('/') }}">
 							<img style="width: 100px; height: auto;" src="{{ Storage::url(setting()->logo) }}" alt="Confirmation lab">
 						</a>
-						<p>© 2023 All rights reserved</p>
+						<p>{!! trans('admin.rights') !!}</p>
 					</div>
 				</div>
 			</div>

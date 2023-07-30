@@ -2,14 +2,14 @@
 
 namespace App\DataTables;
 
-use App\Models\SubService;
+use App\Models\ServiceFile;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class SubServiceDatatable extends DataTable
+class ServiceFileDatatable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -21,9 +21,9 @@ class SubServiceDatatable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('checkbox', 'admin.sub_services.btn.checkbox')
-            ->addColumn('edit', 'admin.sub_services.btn.edit')
-            ->addColumn('delete', 'admin.sub_services.btn.delete')
+            ->addColumn('checkbox', 'admin.files.btn.checkbox')
+            ->addColumn('edit', 'admin.files.btn.edit')
+            ->addColumn('delete', 'admin.files.btn.delete')
             ->rawColumns([
                 'edit',
                 'delete',
@@ -34,12 +34,12 @@ class SubServiceDatatable extends DataTable
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\SubService $model
+     * @param \App\Models\ServiceFile $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function query()
     {
-        return SubService::query();
+        return ServiceFile::query();
     }
 
 
@@ -53,7 +53,7 @@ class SubServiceDatatable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->setTableId('SubServicedatatable-table')
+                    ->setTableId('serviceFiledatatable-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
@@ -163,6 +163,6 @@ class SubServiceDatatable extends DataTable
      */
     protected function filename(): string
     {
-        return 'SubService_' . date('YmdHis');
+        return 'ServiceFile_' . date('YmdHis');
     }
 }

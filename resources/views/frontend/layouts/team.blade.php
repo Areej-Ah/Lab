@@ -3,13 +3,13 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="kl-title-block clearfix text-center tbk-icon-pos--after-title pbottom-50">
-					<h3 class="tbk__title fs-32 lh-52 fw-thin">THE TEAM</h3>
+					<h3 class="tbk__title fs-32 lh-52 fw-thin">{!! trans('admin.team') !!}</h3>
 
 					<div class="symbol-line">
 						<span class="kl-icon tcolor"><img class="kl-iconbox__icon small-logo" src="{{asset('frontend/lab/images/favicons/favicon-16x16.png')}}" alt="Stunning Page Builder"></span>
 					</div>
 
-					<h4 class="tbk__subtitle fs-14">APPROPRIATELY MORPH TECHNICALLY SOUND LEADERSHIP SKILLS WITH VERTICAL MINDSHARE.</h4>
+					<h4 class="tbk__subtitle fs-14">{!! trans('admin.team_intro') !!}</h4>
 				</div>
 			</div>
 
@@ -20,7 +20,7 @@
 						<li>
 							<div class="team-member tm-hover text-center">
 								<a href="#" class="grayscale-link" data-lightbox="image"><img src="{{ Storage::url($team->image) }}" alt="" class="img-responsive"></a>
-								<h5 class="mmb-title">{!! $team->{'name_'.session('lang')} !!}</h5> 
+								<h5 class="mmb-title">{!! $team->{'name_'.session('lang')} !!}</h5>
 								<h6 class="mmb-position">{!! $team->{'postion_'.session('lang')} !!}</h6>
 								<p class="mmb-desc">{!! $team->{'description_'.session('lang')} !!}</p>
 

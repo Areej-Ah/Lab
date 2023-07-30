@@ -31,8 +31,8 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'], function() {
         Route::resource('services','ServicesController');
         Route::delete('services/destroy/all','ServicesController@multi_delete');
 
-        Route::resource('sub_services','SubServicesController');
-        Route::delete('sub_services/destroy/all','SubServicesController@multi_delete');
+        Route::resource('files','ServiceFilesController');
+        Route::delete('files/destroy/all','ServiceFilesController@multi_delete');
 
 
         Route::resource('investments','InvestmentsController');

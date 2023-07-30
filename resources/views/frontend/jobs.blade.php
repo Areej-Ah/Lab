@@ -12,7 +12,7 @@
 					"loop": true,
 					"autoplay": true,
 					"muted": true,
-					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}", 
+					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}",
 					"poster":"images/s1.jpg",
 					"video_ratio": "1.7778"
 					}'>
@@ -32,8 +32,8 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<ul class="breadcrumbs fixclear">
-							<li><a href="{{ url ('/') }}">Home</a></li>
-							<li>Careers</li>
+							<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+							<li>{!! trans('admin.careers') !!}</li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -41,8 +41,8 @@
 
 					<div class="col-sm-6">
 						<div class="subheader-titles">
-							<h2 class="subheader-maintitle">Careers</h2>
-							<h4 class="subheader-subtitle">GET TO KNOW US BETTER</h4>
+							<h2 class="subheader-maintitle">{!! trans('admin.careers') !!}</h2>
+							<h4 class="subheader-subtitle">{!! trans('admin.know_better') !!}</h4>
 						</div>
 					</div>
 				</div>
@@ -75,12 +75,12 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="kl-title-block clearfix tbk--left tbk-symbol--line tbk-icon-pos--after-title ptop-35 pbottom-65">
-					<h2 class="tbk__title fs-34 black montserrat"><strong>WE ARE HIRING!</strong></h2>
+					<h2 class="tbk__title fs-34 black montserrat"><strong>{!! trans('admin.hiring') !!}</strong></h2>
 					<div class="tbk__symbol">
 						<span></span>
 					</div>
 					<h4 class="tbk__subtitle fs-18 fw-thin">
-						For employment, please contact the following e-mail, attaching your CV: <a href="mailto:Partners@Knowlex.org">Partners@Knowlex.org  </a>
+                    {!! trans('admin.hiring_intro') !!} <a href="mailto:Partners@Knowlex.org">{!! $setting->employment_email !!}</a>
 					</h4>
 				</div>
 			</div>

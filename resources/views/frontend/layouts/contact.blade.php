@@ -6,10 +6,10 @@
 					<a href="contact.html" style="background-color: #34495e;" class="hover-box hover-box-2">
 						<span class="hb-circle"></span>
 						<img src="{{asset('frontend/lab/images/quote1.svg')}}" class="hb-img rb-right" alt="" title="" />
-						<h3>Contact Us</h3>
+						<h3>{!! trans('admin.contact_us') !!}</h3>
 						<p>
-							Share your idea and let’s create<br>
-							a great project together!
+                        {!! trans('admin.contact_intro') !!}<br>
+                        {!! trans('admin.contact_intro2') !!}
 						</p>
 					</a>
 				</div>
@@ -20,11 +20,11 @@
 					<a href="jobs.html"  style="background-color: #34495e;" class="hover-box hover-box-2">
 						<span class="hb-circle"></span>
 						<img src="{{asset('frontend/lab/images/hb-hiring.svg')}}" class="hb-img rb-right" alt="" title="" />
-						<h3>Hiring: ON</h3>
-						<h4>join us</h4>
+						<h3>{!! trans('admin.hiring_on') !!}</h3>
+						<h4>{!! trans('admin.join_us') !!}</h4>
 						<p>
-							Send your kickass resume<br>
-								on info@confirmation-lab.com
+                        {!! trans('admin.send_cv') !!}<br>
+								 {!! $setting->employment_email !!}
 						</p>
 					</a>
 				</div>
@@ -34,9 +34,9 @@
 				<div>
 					<a href="#" target="_blank" style="background-image:url(images/hb-catalogue1.png); background-color: #34495e; background-size:cover" class="hover-box hover-box-3">
 						<img src="images/hb-catalogue1.png" class="hb-img " alt="" title="" />
-						<h3>Download Profile</h3>
+						<h3>{!! trans('admin.download_profile') !!}</h3>
 						<p>
-							Read our latest catalog, collateral material or print advertisements for your publication.
+                        {!! trans('admin.read_profile') !!}
 						</p>
 					</a>
 				</div>

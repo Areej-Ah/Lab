@@ -12,7 +12,7 @@
 					"loop": true,
 					"autoplay": true,
 					"muted": true,
-					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}", 
+					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}",
 					"poster":"images/s1.jpg",
 					"video_ratio": "1.7778"
 					}'>
@@ -32,8 +32,8 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<ul class="breadcrumbs fixclear">
-							<li><a href="{{ url ('/') }}">Home</a></li>
-							<li>About Us</li>
+							<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+							<li>{!! trans('admin.about') !!}</li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -41,8 +41,8 @@
 
 					<div class="col-sm-6">
 						<div class="subheader-titles">
-							<h2 class="subheader-maintitle">ABOUT OUR COMPANY</h2>
-							<h4 class="subheader-subtitle">GET TO KNOW US BETTER</h4>
+							<h2 class="subheader-maintitle">{!! trans('admin.about_company') !!}</h2>
+							<h4 class="subheader-subtitle">{!! trans('admin.know_better') !!}</h4>
 						</div>
 					</div>
 				</div>
@@ -80,7 +80,7 @@
 								<span class="tbk__symbol">
 									<span class="tbk__icon glyphicon glyphicon-option-horizontal blue"></span>
 								</span>
-								Who We Are ?
+								{!! trans('admin.who_we_are') !!}
 							</h3>
 						</div>
                     </div>
@@ -90,7 +90,7 @@
 
 							<div class="th-accordion">
 								<div class="acc-group">
-									<a data-toggle="collapse" data-target="#acc13" class="" aria-expanded="true">About Us<span class="acc-icon"></span></a>
+									<a data-toggle="collapse" data-target="#acc13" class="" aria-expanded="true">{!! trans('admin.about') !!}<span class="acc-icon"></span></a>
 
 									<div id="acc13" class="collapse in" aria-expanded="true">
 										<div class="content">
@@ -105,7 +105,7 @@
 								</div>
 
 								<div class="acc-group">
-									<a data-toggle="collapse" data-target="#acc14" class="collapsed">QUALITY POLICY<span class="acc-icon"></span></a>
+									<a data-toggle="collapse" data-target="#acc14" class="collapsed">{!! trans('admin.quality_policy') !!}<span class="acc-icon"></span></a>
 
 									<div id="acc14" class="collapse ">
 										<div class="content">
@@ -120,7 +120,7 @@
 								</div>
 
 								<div class="acc-group">
-									<a data-toggle="collapse" data-target="#acc15" class="collapsed">OBJECTIVE<span class="acc-icon"></span></a>
+									<a data-toggle="collapse" data-target="#acc15" class="collapsed">{!! trans('admin.objective') !!}<span class="acc-icon"></span></a>
 
 									<div id="acc15" class="collapse ">
 										<div class="content">
@@ -134,7 +134,7 @@
 								</div>
 
 								<div class="acc-group">
-									<a data-toggle="collapse" data-target="#acc16" class="collapsed">CORPORATE MISSION<span class="acc-icon"></span></a>
+									<a data-toggle="collapse" data-target="#acc16" class="collapsed">{!! trans('admin.corporate_mission') !!}<span class="acc-icon"></span></a>
 
 									<div id="acc16" class="collapse ">
 										<div class="content">
@@ -147,7 +147,7 @@
 
 
 								<div class="acc-group">
-									<a data-toggle="collapse" data-target="#acc17" class="collapsed">Our Mission and Vision <span class="acc-icon"></span></a>
+									<a data-toggle="collapse" data-target="#acc17" class="collapsed">{!! trans('admin.mission_vision') !!} <span class="acc-icon"></span></a>
 									<div id="acc17" class="collapse ">
 										<div class="content">
 								            <p  style="text-align: justify;">
@@ -163,7 +163,7 @@
 
 					<div class="col-md-4 col-sm-4">
 						<div class="adbox video mb-50">
-							<img src="images/video-image.jpg" style="height: 640px; width: auto;" alt="" title="">
+							<img src="{{asset('frontend/lab/images/video-image.jpg')}}" style="height: 640px; width: auto;" alt="" title="">
 
 							<div class="video_trigger_wrapper">
 								<div class="adbox_container">
@@ -187,8 +187,8 @@
 
 					<div class="col-md-9 col-sm-9">
 						<div class="kl-title-block clearfix tbk--text-default tbk--left text-left tbk-symbol-- tbk-icon-pos--after-title">
-							<h3 class="tbk__title montserrat fw-semibold tcolor">WORK WITH US</h3>
-							<h4 class="tbk__subtitle">We will do everything we can to make our next best client</h4>
+							<h3 class="tbk__title montserrat fw-semibold tcolor">{!! trans('admin.work_with_us') !!}</h3>
+							<h4 class="tbk__subtitle">{!! trans('admin.work_intro') !!}</h4>
 						</div>
 					</div>
 
@@ -197,7 +197,7 @@
 						</div>
 
 						<div class="zn_buttons_element text-left">
-							<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="{{ url ('/contact') }}" style="margin:0 0 10px 0;"><span>Contact Us</span></a>
+							<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="{{ url ('/contact') }}" style="margin:0 0 10px 0;"><span>{!! trans('admin.contact_us') !!}</span></a>
 						</div>
 					</div>
 				</div>

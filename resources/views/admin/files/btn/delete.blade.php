@@ -10,7 +10,7 @@
           </button>
         </div>
 
-        {!! Form::open(['route'=>['sub_services.destroy',$id],'method'=>'delete']) !!}
+        {!! Form::open(['route'=>['files.destroy',$id],'method'=>'delete']) !!}
             <div class="modal-body">
             <p>{{ trans('admin.delete_item',['title'=> session('lang')=='ar'? $title_ar : $title_en ]) }}  </p>
             </div>
