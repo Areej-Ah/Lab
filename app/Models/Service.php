@@ -19,7 +19,5 @@ class Service extends Model
         'description_en'
 
 	];
-    public function subs(){
-        return $this->hasMany(SubService::class);
-    }
+
 }
