@@ -104,15 +104,28 @@
 			<a href="#" class="zn-res-trigger zn-header-icon"></a>
 		</div>
 
-		<div id="main-menu" class="main-nav zn_mega_wrapper ">
-			<ul id="menu-main-menu" class="main-menu zn_mega_menu">
-				<li><a href="{{ url ('/') }}">Home</a></li>
-				<li><a href="{{ url ('/about') }}">About Us</a></li>
-				<li class="menu-item-has-children"><a href="{{ url ('/services') }}">Our Services</a>
-					<ul class="sub-menu clearfix">
-						@foreach($services as $service)
-						<li><a href="/service/{{ $service->id}}">{!! $service->{'name_'.session('lang')} !!}</a></li>
-						@endforeach
+
+				<div id="main-menu" class="main-nav zn_mega_wrapper ">
+					<ul id="menu-main-menu" class="main-menu zn_mega_menu">
+						<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+						<li><a href="{{ url ('/about') }}">{!! trans('admin.about') !!}</a></li>
+						<li class="menu-item-has-children"><a href="{{ url ('/services') }}">{!! trans('admin.services') !!}</a>
+							<ul class="sub-menu clearfix">
+                                @foreach($subs as $sub)
+								<li><a href="/service/{{ $sub->id}}">{!! $sub->title_en !!}</a></li>
+                                @endforeach
+
+							</ul>
+						</li>
+						<li><a href="{{ url ('/news') }}">{!! trans('admin.news') !!}</a></li>
+						<li class="menu-item-has-children"><a href="#">Our Gallery</a>
+							<ul class="sub-menu clearfix">
+								<li><a href="{{ url ('/videos') }}">Video</a></li>
+								<li><a href="{{ url ('/images') }}">Photo</a></li>
+							</ul>
+						</li>
+						<li><a href="{{ url ('/jobs') }}">{!! trans('admin.jobs') !!}</a></li>
+						<li><a href="{{ url ('/contact') }}">{!! trans('admin.contact_us') !!}</a></li>
 
 					</ul>
 				</li>
