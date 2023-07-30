@@ -10,7 +10,7 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-    {!! Form::open(['url' => aurl('sub_services'),'files'=>true]) !!}
+    {!! Form::open(['url' => aurl('files'),'files'=>true]) !!}
 
         <div class="form-group">
             {!! Form::label('title_ar', trans('admin.title_ar')) !!}
@@ -20,26 +20,6 @@
         <div class="form-group">
           {!! Form::label('title_en', trans('admin.title_en')) !!}
           {!! Form::text('title_en',old('title_en'),['class'=>'form-control']) !!}
-        </div>
-
-        <div class="form-group">
-          {!! Form::label('department_ar', trans('admin.department_ar')) !!}
-            <select  name="service_id" id="service_id">
-                <option disapled>department</option>
-                @foreach($services as $service)
-                <option value="{{ $service->id}}">{{ $service->name_ar}}</option>
-                @endforeach
-            </select>
-        </div>
-
-        <div class="form-group">
-          {!! Form::label('department_en', trans('admin.department_en')) !!}
-            <select  name="service_id" id="service_id">
-                <option disapled>department</option>
-                @foreach($services as $service)
-                <option value="{{ $service->id}}">{{ $service->name_en}}</option>
-                @endforeach
-            </select>
         </div>
 
 
@@ -70,16 +50,7 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="exampleInputFile">{{ trans('admin.image') }}</label>
-          <div class="input-group">
-            <div class="custom-file">
-              {!! Form::label('image',trans('admin.image'),['class'=>'custom-file-label']) !!}
-              {!! Form::file('image',['class'=>'custom-file-input']) !!}
 
-            </div>
-          </div>
-        </div>
         <br/>
 
 

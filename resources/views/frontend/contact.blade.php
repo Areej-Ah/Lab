@@ -12,7 +12,7 @@
 					"loop": true,
 					"autoplay": true,
 					"muted": true,
-					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}", 
+					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}",
 					"poster":"images/s1.jpg",
 					"video_ratio": "1.7778"
 					}'>
@@ -32,8 +32,8 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<ul class="breadcrumbs fixclear">
-							<li><a href="{{ url ('/') }}">Home</a></li>
-							<li>Contact Us</li>
+							<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+							<li>{!! trans('admin.contact_us') !!}</li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -41,8 +41,8 @@
 
 					<div class="col-sm-6">
 						<div class="subheader-titles">
-							<h2 class="subheader-maintitle">Contact Us</h2>
-							<h4 class="subheader-subtitle">GET TO KNOW US BETTER</h4>
+							<h2 class="subheader-maintitle">{!! trans('admin.contact_us') !!}</h2>
+							<h4 class="subheader-subtitle">{!! trans('admin.know_better') !!}</h4>
 						</div>
 					</div>
 				</div>
@@ -81,22 +81,22 @@
 						</div>
 
 						<div class="content">
-							<h4 class="stp_title">Contact Us</h4>
+							<h4 class="stp_title">{!! trans('admin.contact_us') !!}</h4>
 							<div class="col-sm-4">
-								<h4 class="m_title">Call</h4>
+								<h4 class="m_title">{!! trans('admin.call') !!}</h4>
 								<div class="m_content">
 									<a href="tel:0096650656565">{!! $setting->phone !!}</a> <br/>
 									<a href="tel:0096650656565">{!! $setting->mobile !!}</a>
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<h4 class="m_title">Email</h4>
+								<h4 class="m_title">{!! trans('admin.email') !!}</h4>
 								<div class="m_content">
-									<a href="mailto:jobs@jobs.com>">{!! $setting->employment_email !!}</a>
+									<a href="mailto:jobs@jobs.com>">{!! $setting->email !!}</a>
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<h4 class="m_title">Address</h4>
+								<h4 class="m_title">{!! trans('admin.address') !!}</h4>
 								<div class="m_content">
 								{!! $setting->{'location_'.session('lang')} !!}
 								</div>
@@ -114,37 +114,37 @@
 						</div>
 
 						<div class="content">
-							<h4 class="stp_title" style="text-align: left;">leave your comment below</h4>
+							<h4 class="stp_title" style="text-align: left;">{!! trans('admin.leave_comment') !!}</h4>
 
 
 								<div class="contactForm">
 									<form action="php_helpers/_contact-process.php" method="post" class="contact_form row" enctype="multipart/form-data">
 										<div class="cf_response"></div>
 										<p class="col-sm-6 kl-fancy-form">
-											<input type="text" name="name" id="cf_name" class="form-control" placeholder="Please enter your first name" value="" tabindex="1" maxlength="35" required>
-											<label class="control-label">FIRSTNAME</label>
+											<input type="text" name="name" id="cf_name" class="form-control" placeholder="{!! trans('admin.enter_firstname') !!}" value="" tabindex="1" maxlength="35" required>
+											<label class="control-label">{!! trans('admin.firstname') !!}</label>
 										</p>
 										<p class="col-sm-6 kl-fancy-form">
-											<input type="text" name="lastname" id="cf_lastname" class="form-control" placeholder="Please enter your first last name" value="" tabindex="1" maxlength="35" required>
-											<label class="control-label">LASTNAME</label>
+											<input type="text" name="lastname" id="cf_lastname" class="form-control" placeholder="{!! trans('admin.enter_lastname') !!}" value="" tabindex="1" maxlength="35" required>
+											<label class="control-label">{!! trans('admin.lastname') !!}</label>
 										</p>
 										<p class="col-sm-12 kl-fancy-form">
-											<input type="text" name="email" id="cf_email" class="form-control h5-email" placeholder="Please enter your email address" value="" tabindex="1" maxlength="35" required>
-											<label class="control-label">EMAIL</label>
+											<input type="text" name="email" id="cf_email" class="form-control h5-email" placeholder="{!! trans('admin.enter_email') !!}" value="" tabindex="1" maxlength="35" required>
+											<label class="control-label">{!! trans('admin.email_form') !!}</label>
 										</p>
 										<p class="col-sm-12 kl-fancy-form">
-											<input type="text" name="subject" id="cf_subject" class="form-control" placeholder="Enter the subject message" value="" tabindex="1" maxlength="35" required>
-											<label class="control-label">SUBJECT</label>
+											<input type="text" name="subject" id="cf_subject" class="form-control" placeholder="{!! trans('admin.enter_subject') !!}" value="" tabindex="1" maxlength="35" required>
+											<label class="control-label">{!! trans('admin.subject') !!}</label>
 										</p>
 										<p class="col-sm-12 kl-fancy-form">
-											<textarea name="message" id="cf_message" class="form-control" cols="30" rows="10" placeholder="Your message" tabindex="4" required></textarea>
-											<label class="control-label">MESSAGE</label>
+											<textarea name="message" id="cf_message" class="form-control" cols="30" rows="10" placeholder="{!! trans('admin.enter_message') !!}" tabindex="4" required></textarea>
+											<label class="control-label">{!! trans('admin.message_form') !!}</label>
 										</p>
 
 										<div class="g-recaptcha" data-sitekey="6Les_VEfAAAAALRq2tRlLna6CGMNvMvm8cCQf6T0"></div>
 
 										<p class="col-sm-12">
-											<button class="btn btn-fullcolor" type="submit">Send</button>
+											<button class="btn btn-fullcolor" type="submit">{!! trans('admin.send') !!}</button>
 										</p>
 
 									</form>
@@ -165,13 +165,13 @@
 						</div>
 
 						<div class="content">
-							<h4 class="stp_title">for jobs :</h4>
+							<h4 class="stp_title">{!! trans('admin.for_jobs') !!}</h4>
 
 							<p class="fs-18">
-								To apply for available jobs, please contact us with your CV:<br><br>
+                            {!! trans('admin.apply') !!}<br><br>
 
 
-								<a href="mailto: jobs@admon.com" target="_blank"> Click Here </a>
+								<a href="mailto: jobs@admon.com" target="_blank"> {!! trans('admin.click_here') !!}</a>
 
 							</p>
 						</div>
@@ -187,7 +187,7 @@
 						</div>
 
 						<div class="content" style="float: none;">
-							<h4 class="stp_title" style="text-align: left;">Our Locations</h4>
+							<h4 class="stp_title" style="text-align: left;">{!! trans('admin.our_locations') !!}</h4>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14504.53261085816!2d46.660878950000004!3d24.6535447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssa!4v1648406937308!5m2!1sen!2ssa"  frameborder="0" style="border:0; width:100%; height:400px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 						</div>
 

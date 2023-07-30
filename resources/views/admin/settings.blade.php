@@ -251,6 +251,27 @@
         </div>
 
 
+        <div class="form-group">
+          {!! Form::label('number_of_marketing_strategy',trans('admin.number_of_marketing_strategy')) !!}
+          {!! Form::text('number_of_marketing_strategy',setting()->number_of_marketing_strategy,['class'=>'form-control']) !!}
+        </div>
+
+        <div class="form-group">
+          {!! Form::label('number_of_new_ideas',trans('admin.number_of_new_ideas')) !!}
+          {!! Form::text('number_of_new_ideas',setting()->number_of_new_ideas,['class'=>'form-control']) !!}
+        </div>
+
+        <div class="form-group">
+          {!! Form::label('number_of_done_projects',trans('admin.number_of_done_projects')) !!}
+          {!! Form::text('number_of_done_projects',setting()->number_of_done_projects,['class'=>'form-control']) !!}
+        </div>
+
+        <div class="form-group">
+          {!! Form::label('number_of_happy_customers',trans('admin.number_of_happy_customers')) !!}
+          {!! Form::text('number_of_happy_customers',setting()->number_of_happy_customers,['class'=>'form-control']) !!}
+        </div>
+
+
 
         <div class="form-group">
           {!! Form::label('phone',trans('admin.phone')) !!}

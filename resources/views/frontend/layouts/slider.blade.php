@@ -24,15 +24,15 @@
 
 				<div class="container kl-iosslide-caption kl-ioscaption--style5 fromleft klios-alignleft kl-caption-posv-middle">
 					<div class="animateme" data-when="span" data-from="0" data-to="0.75" data-opacity="0.1" data-easing="linear">
-						<h2 class="main_title has_titlebig "><span>{!! $slider->{'title_'.session('lang')}  !!}</span></h2>
+						<h2 class="main_title has_titlebig "><span>{!! $setting->{'sitename_'.session('lang')}  !!}</span></h2>
 
-						<h3 class="title_big">{!! $slider->{'text_'.session('lang')}  !!}</h3>
+						<h3 class="title_big">{!! $setting->{'slogan_'.session('lang')}  !!}</h3>
 
 						<div class="more">
-							<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">ABOUT US</a>
+							<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">{!! trans('admin.about') !!}</a>
 
 
-							<a class="btn btn-lined " href="{{ url ('/contact') }}" target="_self">CONTACT US</a>
+							<a class="btn btn-lined " href="{{ url ('/contact') }}" target="_self">{!! trans('admin.contact_us') !!}</a>
 						</div>
 
 
@@ -48,7 +48,7 @@
 			<span class="thin-arrows ta__prev"></span>
 
 			<div class="btn-label">
-				PREV
+            {!! trans('admin.prev') !!}
 			</div>
 		</div>
 
@@ -56,7 +56,7 @@
 			<span class="thin-arrows ta__next"></span>
 
 			<div class="btn-label">
-				NEXT
+            {!! trans('admin.next') !!}
 			</div>
 		</div>
 	</div>
@@ -91,7 +91,7 @@
 							</div>
 
 							<div class="ac-buttons">
-								<a class="btn btn-fullwhite ac-btn" href="{{ url ('/about') }}" target="_self">LEARN MORE</a>
+								<a class="btn btn-fullwhite ac-btn" href="{{ url ('/about') }}" target="_self">{!! trans('admin.learn_more') !!}</a>
 							</div>
 						</div>
 					</div>

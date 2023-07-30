@@ -13,7 +13,7 @@
 					"loop": true,
 					"autoplay": true,
 					"muted": true,
-					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}", 
+					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}",
 					"poster":"images/s1.jpg",
 					"video_ratio": "1.7778"
 					}'>
@@ -33,8 +33,8 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<ul class="breadcrumbs fixclear">
-							<li><a href="{{ url ('/') }}">Home</a></li>
-							<li>Our Gallery</li>
+							<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+							<li>{!! trans('admin.gallery') !!}</li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -42,8 +42,8 @@
 
 					<div class="col-sm-6">
 						<div class="subheader-titles">
-							<h2 class="subheader-maintitle">Our Gallery</h2>
-							<h4 class="subheader-subtitle">GET TO KNOW US BETTER</h4>
+							<h2 class="subheader-maintitle">{!! trans('admin.gallery') !!}</h2>
+							<h4 class="subheader-subtitle">{!! trans('admin.know_better') !!}</h4>
 						</div>
 					</div>
 				</div>

@@ -44,6 +44,10 @@ class Setting extends Model
         'employment_email',
         'slogan_en',
         'slogan_ar',
+        'number_of_marketing_strategy',
+        'number_of_new_ideas',
+        'number_of_done_projects',
+        'number_of_happy_customers',
 
 	];
 }

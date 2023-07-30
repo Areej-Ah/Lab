@@ -3,9 +3,9 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="kl-title-block clearfix text-center tbk-symbol-- tbk-icon-pos--after-title">
-					<h3 class="tbk__title montserrat fs-36 lh-36 fw-bold">OK, SO WHY CONFIRMATION LAB?</h3>
+					<h3 class="tbk__title montserrat fs-36 lh-36 fw-bold">{!! trans('admin.about_title') !!}</h3>
 
-					<h4 class="tbk__subtitle fs-18 fw-vthin">Well, lots of reasons, but most importantly because..</h4>
+					<h4 class="tbk__subtitle fs-18 fw-vthin">{!! trans('admin.about_intro') !!}</h4>
 				</div>
 			</div>
 		</div>
@@ -26,7 +26,7 @@
 
 								<div class="kl-iconbox__content-wrapper">
 									<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
-										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal">Our Mission and Vision </h3>
+										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal">{!! trans('admin.mission_vision') !!}</h3>
 									</div>
 
 									<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
@@ -48,7 +48,7 @@
 
 								<div class="kl-iconbox__content-wrapper">
 									<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
-										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal ">QUALITY POLICY</h3>
+										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal ">{!! trans('admin.quality_policy') !!}</h3>
 									</div>
 
 									<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
@@ -72,7 +72,7 @@
 
 								<div class="kl-iconbox__content-wrapper">
 									<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
-										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal">OBJECTIVE</h3>
+										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal">{!! trans('admin.objective') !!}</h3>
 									</div>
 
 									<div class="kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
@@ -94,7 +94,7 @@
 
 								<div class="kl-iconbox__content-wrapper">
 									<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
-										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal">CORPORATE MISSION</h3>
+										<h3 class="kl-iconbox__title fs-16 lh-22 fw-normal">{!! trans('admin.corporate_mission') !!}</h3>
 									</div>
 
 									<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
@@ -155,7 +155,7 @@
 								<rect class="borderanim2-svg__shape" height="70" width="400"></rect>
 							</svg>
 
-							<span class="media-container__text">LEARN MORE</span>
+							<span class="media-container__text">{!! trans('admin.learn_more') !!}</span>
 						</div>
 					</a>
 				</div>
@@ -166,7 +166,7 @@
 					<div class="row hg_col_eq_last">
 						<div class="col-md-12 col-sm-12">
 							<div class="kl-title-block clearfix text-left tbk-symbol--line tbk-icon-pos--after-title pbottom-0">
-								<h3 class="tbk__title montserrat fs-38 lh-46 fw-bold">WHO WE ARE ?</h3>
+								<h3 class="tbk__title montserrat fs-38 lh-46 fw-bold">{!! trans('admin.who_we_are') !!}</h3>
 
 
 							</div>

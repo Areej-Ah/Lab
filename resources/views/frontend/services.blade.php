@@ -12,7 +12,7 @@
 					"loop": true,
 					"autoplay": true,
 					"muted": true,
-					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}", 
+					"mp4":"{{URL::asset('frontend/lab/videos/laboratory.mp4')}}",
 					"poster":"images/s1.jpg",
 					"video_ratio": "1.7778"
 					}'>
@@ -32,8 +32,8 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<ul class="breadcrumbs fixclear">
-							<li><a href="{{ url ('/') }}">Home</a></li>
-							<li>Our Services</li>
+							<li><a href="{{ url ('/') }}">{!! trans('admin.home') !!}</a></li>
+							<li>{!! trans('admin.services') !!}</li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -41,8 +41,8 @@
 
 					<div class="col-sm-6">
 						<div class="subheader-titles">
-							<h2 class="subheader-maintitle">Our Services</h2>
-							<h4 class="subheader-subtitle">GET TO KNOW US BETTER</h4>
+							<h2 class="subheader-maintitle">{!! trans('admin.services') !!}</h2>
+							<h4 class="subheader-subtitle">{!! trans('admin.know_better') !!}</h4>
 						</div>
 					</div>
 				</div>
@@ -75,13 +75,13 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="text-left tbk-symbol--line tbk-icon-pos--after-title clearfix">
-					<h2 class="black fs-34 fw-semibold">OUR SERVICES</h2>
+					<h2 class="black fs-34 fw-semibold">{!! trans('admin.services') !!}</h2>
 
 					<div class="tbk__symbol ">
 						<span></span>
 					</div>
 
-					<h5 class="tbk__subtitle fs-18 light-gray fw-thin">We offer chemical and microbiological analysis services for food and water, utilizing state-of-the-art technology and highly qualified professionals to ensure the quality and safety of the products that consumers purchase and consume</h5>
+					<h5 class="tbk__subtitle fs-18 light-gray fw-thin">{!! trans('admin.services_intro') !!}</h5>
 				</div>
 			</div>
 		</div>
@@ -143,8 +143,8 @@
 
 			<div class="col-md-9 col-sm-9">
 				<div class="kl-title-block clearfix tbk--text-default tbk--left text-left tbk-symbol-- tbk-icon-pos--after-title">
-					<h3 class="tbk__title montserrat fw-semibold tcolor">WORK WITH US</h3>
-					<h4 class="tbk__subtitle">Well do everything we can to make our next best client</h4>
+					<h3 class="tbk__title montserrat fw-semibold tcolor">{!! trans('admin.work_with_us') !!}</h3>
+					<h4 class="tbk__subtitle">{!! trans('admin.work_intro') !!}</h4>
 				</div>
 			</div>
 
@@ -153,7 +153,7 @@
 				</div>
 
 				<div class="zn_buttons_element text-left">
-					<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="contact.html" style="margin:0 0 10px 0;"><span>Contact Us</span></a>
+					<a class="btn-element btn btn-lined lined-custom btn-md btn-block " href="contact.html" style="margin:0 0 10px 0;"><span>{!! trans('admin.contact_us') !!}</span></a>
 				</div>
 			</div>
 		</div>

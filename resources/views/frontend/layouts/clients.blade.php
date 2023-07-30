@@ -10,7 +10,7 @@
 
 					<div class="ts-pt-partners ts-pt-partners--y-title clearfix">
 						<div class="ts-pt-partners__title">
-							OUR CLIENTS
+                        {!! trans('admin.clients') !!}
 						</div>
 
 						<div class="ts-pt-partners__carousel-wrapper">

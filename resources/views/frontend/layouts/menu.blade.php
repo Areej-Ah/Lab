@@ -18,7 +18,7 @@
 								<img src="{{ Storage::url(setting()->logo2) }}" class="" alt="Confirmation Lab" title="Confirmation Lab" />
 							</p>
 							<p style="text-align: center;">
-							{!! $setting->sitename_en !!}
+							{!! $setting->{'sitename_'.session('lang')}  !!}
 							</p>
 						</div>
 
@@ -29,12 +29,12 @@
 									Email:&nbsp;<a href="mailto:sales@yourwebsite.com">{!! $setting->email !!}</a>
 								</p>
 								<p>
-								{!! $setting->location !!}
+								{!! $setting->{'location_'.session('lang')}  !!}
 
 								</p>
 								<a href="http://goo.gl/maps/1OhOu" class="map-link" target="_blank" title="">
 									<span class="glyphicon glyphicon-map-marker icon-white"></span>
-									<span>Open in Google Maps</span>
+									<span>{!! trans('admin.open_in_map') !!}</span>
 								</a>
 							</div>
 							<div style="height:20px;">
@@ -64,7 +64,7 @@
 				<li class="languages drop">
 					<a href="#">
 						<span class="globe glyphicon glyphicon-globe icon-white xs-icon"></span>
-						<span class="hidden-xs">LANGUAGES</span>
+						<span class="hidden-xs">{!! trans('admin.languages') !!}</span>
 					</a>
 					<div class="pPanel">
 						<ul class="inner">
@@ -111,34 +111,23 @@
 						<li><a href="{{ url ('/about') }}">{!! trans('admin.about') !!}</a></li>
 						<li class="menu-item-has-children"><a href="{{ url ('/services') }}">{!! trans('admin.services') !!}</a>
 							<ul class="sub-menu clearfix">
-                                @foreach($subs as $sub)
-								<li><a href="/service/{{ $sub->id}}">{!! $sub->title_en !!}</a></li>
+                                @foreach($services as $service)
+								<li><a href="/service/{{ $service->id}}">{!! $service->{'name_'.session('lang')} !!}</a></li>
                                 @endforeach
 
 							</ul>
 						</li>
 						<li><a href="{{ url ('/news') }}">{!! trans('admin.news') !!}</a></li>
-						<li class="menu-item-has-children"><a href="#">Our Gallery</a>
+						<li class="menu-item-has-children"><a href="#">{!! trans('admin.gallery') !!}</a>
 							<ul class="sub-menu clearfix">
-								<li><a href="{{ url ('/videos') }}">Video</a></li>
-								<li><a href="{{ url ('/images') }}">Photo</a></li>
+								<li><a href="{{ url ('/videos') }}">{!! trans('admin.video') !!}</a></li>
+								<li><a href="{{ url ('/images') }}">{!! trans('admin.photo') !!}</a></li>
 							</ul>
 						</li>
 						<li><a href="{{ url ('/jobs') }}">{!! trans('admin.jobs') !!}</a></li>
 						<li><a href="{{ url ('/contact') }}">{!! trans('admin.contact_us') !!}</a></li>
 
 					</ul>
-				</li>
-				<li><a href="{{ url ('/news') }}">Our News</a></li>
-				<li class="menu-item-has-children"><a href="#">Our Gallery</a>
-					<ul class="sub-menu clearfix">
-						<li><a href="{{ url ('/videos') }}">Video</a></li>
-						<li><a href="{{ url ('/images') }}">Photo</a></li>
-					</ul>
-				</li>
-				<li><a href="{{ url ('/jobs') }}">Jobs</a></li>
-				<li><a href="{{ url ('/contact') }}">Contact us</a></li>
-			</ul>
 		</div>
 	</div>
 </header>
