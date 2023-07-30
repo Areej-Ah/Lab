@@ -15,7 +15,7 @@
 
       <div class="form-group">
             {!! Form::label('title_ar', trans('admin.title_ar')) !!}
-            {!! Form::text('title_ar',$slider->name_ar,['class'=>'form-control']) !!}
+            {!! Form::text('title_ar',$slider->title_ar,['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
@@ -30,12 +30,12 @@
 
         <div class="form-group">
           {!! Form::label('text_en', trans('admin.text_en')) !!}
-          {!! Form::text('text_en',$nslider->text_en,['class'=>'form-control']) !!}
+          {!! Form::text('text_en',$slider->text_en,['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
         {!! Form::label('activation', trans('admin.activation')) !!}
-        {!! Form::select('active', ['1' => trans('admin.active'), '0' => trans('admin.inactive')],$category->active,['class'=>'form-control']) !!}
+        {!! Form::select('active', ['1' => trans('admin.active'), '0' => trans('admin.inactive')],$slider->active,['class'=>'form-control']) !!}
        </div>
 
 
