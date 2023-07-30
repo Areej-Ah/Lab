@@ -93,7 +93,7 @@
 	body .screenshot-box .left-side h3.title { font-size: 19px; }
 	body .screenshot-box .left-side ul.features li h4 + span { font-size: 13px; }
 
-	body #footer .contact-details {background:url(../images/say_hi.png) no-repeat right top;}
+	body #footer .contact-details {direction: rtl;}
 
 
 	body .zn_float_right {float:right; }
