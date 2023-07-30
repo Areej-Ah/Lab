@@ -223,16 +223,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 /* Style 5 - Since 4.0 */
 .kl-ioscaption--style5 {z-index: 1;}
-.kl-ioscaption--style5 .main_title {clear:both; margin-top: 0;color:#fff; font-size:48px; line-height:1.2; padding: 0; float:left; margin-bottom: 80px; opacity:0;  text-shadow:none; background: none; position: relative; -webkit-transition:opacity .3s, left .3s, right .3s; transition:opacity .3s, left .3s, right .3s; border: 0;}
+.kl-ioscaption--style5 .main_title {clear:both; margin-top: 0;color:#fff; font-size:48px; line-height:1.2; padding: 0; float:right; margin-bottom: 80px; opacity:0;  text-shadow:none; background: none; position: relative; -webkit-transition:opacity .3s, left .3s, right .3s; transition:opacity .3s, left .3s, right .3s; border: 0;}
 .kl-ioscaption--style5 .main_title.has_titlebig,
 .kl-ioscaption--style5 .main_title.has_klios-line {margin-bottom: 40px;}
 .kl-ioscaption--style5 .main_title:not(.has_klios-line)::before {content:'';position: absolute; bottom:-20px; width:50px; height:3px; background: #fff;}
-.kl-ioscaption--style5 .title_big {float:left; clear:both; position: relative; font-size:28px; line-height:1.2; color:#fff; position:relative;  opacity:0; z-index:1; min-width: 400px; text-align: left;}
+.kl-ioscaption--style5 .title_big {float:right; clear:both; position: relative; font-size:28px; line-height:1.2; color:#fff; position:relative;  opacity:0; z-index:1; min-width: 400px; text-align: right;}
 .kl-ioscaption--style5 .main_title + .title_big {margin-bottom: 40px;}
-.kl-ioscaption--style5 .title_small {float:left; clear:both; position: relative; font-size:16px; line-height:1.3; color:#F8F8F8; position:relative; z-index:1; opacity:0;  text-align:right; font-weight: 400; margin-top: 20px; }
+.kl-ioscaption--style5 .title_small {float:right; clear:both; position: relative; font-size:16px; line-height:1.3; color:#F8F8F8; position:relative; z-index:1; opacity:0;  text-align:left; font-weight: 400; margin-top: 20px; }
 .kl-ioscaption--style5 .title_small_top {float:left; position: relative; font-size:16px; line-height:1.3; color:rgba(255,255,255,.8); position:relative; z-index:1; opacity:0; font-weight: 400;  }
-.kl-ioscaption--style5 .more {clear:left; float:left; position:relative;  opacity:0; padding: 0; margin-bottom: 10px;}
-.kl-ioscaption--style5 .btn-fullcolor {margin-right:10px;}
+.kl-ioscaption--style5 .more {clear:right; float:right; position:relative;  opacity:0; padding: 0; margin-bottom: 10px;}
+.kl-ioscaption--style5 .btn-fullcolor {margin-left:10px;}
 /* Has square box */
 .kl-ioscaption--style5 .main_title.kl-ios-has-sqbox::before {width: 100px; height:3px; bottom: -30px;}
 .kl-ioscaption--style5 .main_title.kl-ios-has-sqbox {margin-bottom: 80px;}

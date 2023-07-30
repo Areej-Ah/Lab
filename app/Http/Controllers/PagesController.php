@@ -8,6 +8,7 @@ use App\Models\Service;
 use App\Models\Customer;
 use App\Models\Setting;
 use App\Models\SocialMedia;
+use App\Models\Slider;
 use App\Models\News;
 use App\Models\Photo;
 use App\Models\Video;
@@ -20,13 +21,13 @@ class PagesController extends Controller
     {
         $setting= Setting::first();
         $services= Service::where('active', '1')->get();
+        $sliders= Slider::where('active', '1')->get();
         $news= News::where('active', '1')->take(4)->get();
         $customers= Customer::where('show', '1')->get();
         $teams= Team::where('active', '1')->get();
-        $subs = SubService::where('active', '1')->get();
         $socialMedia= SocialMedia::where('active', '1')->get();
 
-        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','subs','socialMedia','news'));
+        return view('frontend.home', compact('setting', 'services', 'customers', 'teams','sliders','socialMedia','news'));
     }
 
 

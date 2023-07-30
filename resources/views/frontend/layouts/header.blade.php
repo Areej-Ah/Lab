@@ -24,21 +24,27 @@
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,600italic,700,800,800italic" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="{{asset('frontend/lab/css/bootstrap.css')}}" type="text/css" media="all">
-
-	<link rel="stylesheet" href="{{asset('frontend/lab/css/sliders/ios/style.css')}}" type="text/css" media="all">
-
+    @if(lang() == "ar")
+    <link rel="stylesheet" href="{{asset('frontend/lab/css/bootstrap.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('frontend/lab/css/template.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('frontend/lab/css/responsive.css')}}" type="text/css" media="all">
-	<link rel="stylesheet" href="{{asset('frontend/lab/css/base-sizing.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/custom.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/sliders/ios/style.css')}}" type="text/css" media="all">
+    @else
+    <link rel="stylesheet" href="{{asset('frontend/lab/E/css/bootstrap.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{asset('frontend/lab/E/css/template.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{asset('frontend/lab/E/css/responsive.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" href="{{asset('frontend/lab/E/css/custom.css')}}" type="text/css" />
+	<link rel="stylesheet" href="{{asset('frontend/lab/E/css/sliders/ios/style.css')}}" type="text/css" media="all">
 
+    @endif
+
+	<link rel="stylesheet" href="{{asset('frontend/lab/css/base-sizing.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('frontend/lab/css/niches/custom-dental.css')}}" type="text/css" />
 
-	<link rel="stylesheet" href="{{asset('frontend/lab/css/custom.css')}}" type="text/css" />
-
 	<script type="text/javascript" src="{{URL::asset('frontend/lab/js/modernizr.min.js')}}"></script>
-
 	<script type="text/javascript" src="{{URL::asset('frontend/lab/js/jquery.js')}}"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body class="">
 
