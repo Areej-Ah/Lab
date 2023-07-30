@@ -31,7 +31,7 @@
 
 											<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-                                                {!! $setting->vision_en !!}
+                                                {!! $setting->{'vision_'.session('lang')} !!}
 												</p>
 											</div>
 										</div>
@@ -53,7 +53,7 @@
 
 											<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-												{!! $setting->quality_policy_en !!}
+												{!! $setting->{'quality_policy_'.session('lang')} !!}
 												</p>
 											</div>
 										</div>
@@ -77,7 +77,7 @@
 
 											<div class="kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-                                                {!! $setting->objective_en !!}
+                                                {!! $setting->{'objective_'.session('lang')} !!}
 												</p>
 											</div>
 										</div>
@@ -99,7 +99,7 @@
 
 											<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 												<p class="kl-iconbox__desc fs-14 gray">
-                                                {!! $setting->corporate_mission_en !!}
+                                                {!! $setting->{'corporate_mission_'.session('lang')} !!}
 												</p>
 											</div>
 										</div>
@@ -123,10 +123,10 @@
 
 								<span class="imgboxes-border-helper"></span>
 
-								<h3 class="m_title imgboxes-title">{!! $service->name_en !!} </h3>
+								<h3 class="m_title imgboxes-title">{!! $setting->{'name_'.session('lang')} !!}</h3>
 							</a>
 
-							<p>{!! $service->description_en !!} </p>
+							<p>{!! $setting->{'description_'.session('lang')} !!}</p>
 						</div>
 					</div>
                     @endforeach
@@ -181,7 +181,7 @@
 								<div class="col-md-8 col-sm-8">
 									<div class="text_box">
 										<p>
-                                        {!! $setting->about_en !!}
+                                        {!! $setting->{'about_'.session('lang')} !!}
 
 										</p>
 									</div>

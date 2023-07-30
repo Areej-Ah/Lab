@@ -36,7 +36,7 @@
 								<div class="itemContainer">
 									<div class="itemHeader">
 										<h3 class="itemTitle">
-											<a href="{{ url ('/new') }}" title="Enthusiastically">{!! $new->title_en !!} </a>
+											<a href="{{ url ('/new') }}" title="Enthusiastically">{!! $new->{'title_'.session('lang')} !!}</a>
 										</h3>
 
 										<div class="post_details">
@@ -54,7 +54,7 @@
 												</a>
 											</div>
 											<p>
-											{!! $new->text_en !!}
+											{!! $new->{'text_'.session('lang')} !!}
 											</p>
 										</div>
 
@@ -65,7 +65,7 @@
 
 
 											<div class="itemReadMore">
-												<a class="btn btn-fullcolor readMore" href="/new/{{ $new->id}}" title="">Read more</a>
+												<a class="btn btn-fullcolor readMore" href="/new/{{ $new->id}}" title="">{!! trans('admin.read_more') !!}</a>
 											</div>
 										</div>
 										<div class="clear">
@@ -126,7 +126,7 @@
 												</span>
 											</a>
 											<h4 class="title">
-												<a href="/new/{{ $new->id}}" title="News Title">{!! $new->title_en !!}</a>
+												<a href="/new/{{ $new->id}}" title="News Title">{!! $new->{'title_'.session('lang')} !!}</a>
 											</h4>
 
 										</li>
