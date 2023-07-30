@@ -9,6 +9,7 @@
 	<div class="th-sparkles">
 	</div>
 
+
 	<div class="iosSlider kl-slideshow-inner animateme" data-trans="6000" data-autoplay="1" data-infinite="true" data-when="span" data-from="0" data-to="0.75" data-translatey="300" data-easing="linear">
 		<div class="kl-iosslider hideControls">
 
@@ -30,11 +31,13 @@
 						<div class="more">
 							<a class="btn btn-fullcolor " href="{{ url ('/about') }}" target="_self">ABOUT US</a>
 
+
 							<a class="btn btn-lined " href="{{ url ('/contact') }}" target="_self">CONTACT US</a>
 						</div>
 
 
 					</div>
+
 				</div>
 			</div>
 			@endforeach
