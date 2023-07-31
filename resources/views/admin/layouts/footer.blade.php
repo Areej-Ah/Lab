@@ -62,12 +62,12 @@
 <script src="{{ url('/') }}/frontend/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="{{ url('/') }}/frontend/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="{{ url('/') }}/frontend/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 
-
+<script src="{{ url('/') }}/frontend/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="{{ url('/') }}/frontend/adminlte/plugins/datatables/dataTables.buttons.min.js"></script>
-
+<script src="{{ url('/') }}/frontend/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="{{ url('/') }}/frontend/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="{{ url('/') }}/frontend/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script src="{{ url('/') }}/vendor/datatables/buttons.server-side.js"></script>
@@ -84,8 +84,6 @@
 @stack('js')
 @stack('css')
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
   @yield('scripts')
 
 </body>
