@@ -16,14 +16,14 @@ class ServiceFilesController extends Controller
 {
     public function index(ServiceFileDatatable $serviceFile)
     {
-        return $serviceFile->render('admin.files.index',['title'=>trans('admin.serviceFile')]);
+        return $serviceFile->render('admin.service_files.index',['title'=>trans('admin.serviceFile')]);
     }
 
 
 
     public function create()
     {
-      return view('admin.files.create',['title'=>trans('admin.create')]);
+      return view('admin.service_files.create',['title'=>trans('admin.create')]);
     }
 
 
@@ -66,7 +66,7 @@ class ServiceFilesController extends Controller
 
         ServiceFile::create($data);
         session()->flash('success',trans('admin.record_added'));
-        return redirect(aurl('files'));
+        return redirect(aurl('service_files'));
 
 
     }
@@ -83,7 +83,7 @@ class ServiceFilesController extends Controller
     public function edit(ServiceFile $serviceFile)
     {
         $title=trans('admin.edit');
-        return view('admin.files.edit',compact('serviceFile','title'));
+        return view('admin.service_files.edit',compact('serviceFile','title'));
 
     }
 
@@ -127,7 +127,7 @@ class ServiceFilesController extends Controller
 
         ServiceFile::where('id',$serviceFile->id)->update($data);
         session()->flash('success',trans('admin.record_edited'));
-        return redirect(aurl('files'));
+        return redirect(aurl('service_files'));
 
     }
 
@@ -138,7 +138,7 @@ class ServiceFilesController extends Controller
         Storage::delete($serviceFile->file);
         $serviceFile->delete();
         session()->flash('success',trans('admin.record_deleted'));
-        return redirect(aurl('files'));
+        return redirect(aurl('service_files'));
     }
 
 
@@ -164,6 +164,6 @@ class ServiceFilesController extends Controller
 
 
         session()->flash('success',trans('admin.record_deleted'));
-        return redirect(aurl('files'));
+        return redirect(aurl('service_files'));
     }
 }

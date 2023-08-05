@@ -41,7 +41,7 @@
 
        <div class="form-group">
             {!! Form::label('service_name', trans('admin.service_name')) !!}
-            {!! Form::select('service_id',App\Models\Service::pluck('name_'.session('lang'),'id'),$service->service_id,['class'=>'form-control']) !!}
+            {!! Form::select('service_id',App\Models\Service::pluck('name_'.session('lang'),'id'),$serviceFile->service_id,['class'=>'form-control']) !!}
        </div>
 
 
