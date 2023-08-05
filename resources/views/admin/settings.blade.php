@@ -61,7 +61,7 @@
               <div class="info-box bg-light">
                 <div class="info-box-content">
 
-                <center> <img style="width:auto; height:80px;" src="{{ Storage::url(setting()->logo) }}" /></center>
+                <center> <img style="width:auto; height:50px;" src="{{ Storage::url(setting()->logo) }}" /></center>
 
                 </span></span></div>
               </div>
@@ -87,7 +87,7 @@
               <div class="info-box bg-light">
                 <div class="info-box-content">
 
-                <center> <img style="width:auto; height:80px;" src="{{ Storage::url(setting()->logo2) }}" /></center>
+                <center> <img style="width:auto; height:50px;" src="{{ Storage::url(setting()->logo2) }}" /></center>
 
                 </span></span></div>
               </div>
@@ -118,7 +118,7 @@
               <div class="info-box bg-light">
                 <div class="info-box-content">
 
-                <center> <img style="width:auto; height:80px;" src="{{ Storage::url(setting()->icon) }}" /></center>
+                <center> <img style="width:auto; height:50px;" src="{{ Storage::url(setting()->icon) }}" /></center>
 
                 </span></span></div>
               </div>

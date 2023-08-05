@@ -117,7 +117,7 @@ $lng = !empty($mall->lng)?$mall->lng:'46.6607619';
             <div class="info-box bg-light">
               <div class="info-box-content">
               
-              <center> <img style="width:auto; height:80px;" src="{{ Storage::url($mall->logo) }}" /></center>
+              <center> <img style="width:auto; height:50px;" src="{{ Storage::url($mall->logo) }}" /></center>
               
               </span></span></div>
             </div>

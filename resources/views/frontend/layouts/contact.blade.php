@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-4 col-sm-4">
 				<div>
-					<a href="contact.html" style="background-color: #34495e;" class="hover-box hover-box-2">
+					<a href="{{ url ('/contact') }}" style="background-color: #34495e;" class="hover-box hover-box-2">
 						<span class="hb-circle"></span>
 						<img src="{{asset('frontend/lab/images/quote1.svg')}}" class="hb-img rb-right" alt="" title="" />
 						<h3>{!! trans('admin.contact_us') !!}</h3>
@@ -17,7 +17,7 @@
 
 			<div class="col-md-4 col-sm-4">
 				<div>
-					<a href="jobs.html"  style="background-color: #34495e;" class="hover-box hover-box-2">
+					<a href="{{ url ('/jobs') }}"  style="background-color: #34495e;" class="hover-box hover-box-2">
 						<span class="hb-circle"></span>
 						<img src="{{asset('frontend/lab/images/hb-hiring.svg')}}" class="hb-img rb-right" alt="" title="" />
 						<h3>{!! trans('admin.hiring_on') !!}</h3>

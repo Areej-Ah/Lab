@@ -46,7 +46,7 @@
             <div class="info-box bg-light">
               <div class="info-box-content">
 
-              <center> <img style="width:auto; height:80px;" src="{{ Storage::url($photo->image) }}" /></center>
+              <center> <img style="width:auto; height:50px;" src="{{ Storage::url($photo->image) }}" /></center>
 
               </span></span></div>
             </div>

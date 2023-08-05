@@ -55,7 +55,7 @@
             <div class="info-box bg-light">
               <div class="info-box-content">
 
-              <center> <img style="width:auto; height:80px;" src="{{ Storage::url($service->icon) }}" /></center>
+              <center> <img style="width:auto; height:50px;" src="{{ Storage::url($service->icon) }}" /></center>
 
               </span></span></div>
             </div>
@@ -81,7 +81,7 @@
             <div class="info-box bg-light">
               <div class="info-box-content">
 
-              <center> <img style="width:auto; height:80px;" src="{{ Storage::url($service->image) }}" /></center>
+              <center> <img style="width:auto; height:50px;" src="{{ Storage::url($service->image) }}" /></center>
 
               </span></span></div>
             </div>
@@ -114,14 +114,12 @@
 
     <script>
       $('.summernote_description_ar').summernote({
-        placeholder: '{{$service->description_ar}}',
         tabsize: 2,
         height: 100
       });
     </script>
   <script>
       $('.summernote_description_en').summernote({
-        placeholder: '{{$service->description_en}}',
         tabsize: 2,
         height: 100
       });

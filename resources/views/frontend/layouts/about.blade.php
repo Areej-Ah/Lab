@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="kl-title-block clearfix text-center tbk-symbol-- tbk-icon-pos--after-title">
-					<h3 class="tbk__title montserrat fs-36 lh-36 fw-bold">{!! trans('admin.about_title') !!}</h3>
+					<h3 class="tbk__title montserrat fs-36 lh-36 fw-bold">{!! trans('admin.about_title',['title' => $setting->{'sitename_'.session('lang')} ]) !!}</h3>
 
 					<h4 class="tbk__subtitle fs-18 fw-vthin">{!! trans('admin.about_intro') !!}</h4>
 				</div>
@@ -31,7 +31,7 @@
 
 									<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 										<p class="kl-iconbox__desc fs-14 gray">
-										{!! $setting->{'vision_'.session('lang')} !!}
+											{!! \Illuminate\Support\Str::limit(strip_tags($setting->{'vision_'.session('lang')}), 200) !!}
 										</p>
 									</div>
 								</div>
@@ -52,8 +52,8 @@
 									</div>
 
 									<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
-										<p class="kl-iconbox__desc fs-14 gray">
-										{!! $setting->{'quality_policy_'.session('lang')} !!}
+										<p class="kl-iconbox__desc fs-14 gray">		
+											{!! \Illuminate\Support\Str::limit(strip_tags($setting->{'quality_policy_'.session('lang')}), 200) !!}
 										</p>
 									</div>
 								</div>
@@ -77,7 +77,7 @@
 
 									<div class="kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 										<p class="kl-iconbox__desc fs-14 gray">
-										{!! $setting->{'objective_'.session('lang')} !!}
+											{!! \Illuminate\Support\Str::limit(strip_tags($setting->{'objective_'.session('lang')}), 200) !!}
 										</p>
 									</div>
 								</div>
@@ -99,7 +99,7 @@
 
 									<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
 										<p class="kl-iconbox__desc fs-14 gray">
-										{!! $setting->{'corporate_mission_'.session('lang')} !!}
+											{!! \Illuminate\Support\Str::limit(strip_tags($setting->{'corporate_mission_'.session('lang')}), 200) !!}
 										</p>
 									</div>
 								</div>
@@ -119,14 +119,14 @@
 			<div class="col-md-6 col-sm-6">
 				<div class="box image-boxes imgboxes_style4 kl-title_style_bottom">
 					<a class="imgboxes4_link imgboxes-wrapper" href="service.html" target="_self">
-						<img src="{{ Storage::url($service->image) }}" alt="Microbiology Department" title="{{$service->name_en}}" class="img-responsive imgbox_image cover-fit-img">
+						<img src="{{ Storage::url($service->image) }}" alt="Microbiology Department" title="{!! $service->{'name_'.session('lang')} !!}" class="img-responsive imgbox_image cover-fit-img">
 
 						<span class="imgboxes-border-helper"></span>
 
-						<h3 class="m_title imgboxes-title">{!! $setting->{'name_'.session('lang')} !!}</h3>
+						<h3 class="m_title imgboxes-title">{!! $service->{'name_'.session('lang')} !!}</h3>
 					</a>
 
-					<p>{!! $setting->{'description_'.session('lang')} !!}</p>
+					<p>{!! $service->{'description_'.session('lang')} !!}</p>
 				</div>
 			</div>
 			@endforeach

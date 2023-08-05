@@ -111,7 +111,7 @@ $(document).ready(function(){
             <div class="info-box bg-light">
               <div class="info-box-content">
               
-              <center> <img style="width:auto; height:80px;" src="{{ Storage::url($category->icon) }}" /></center>
+              <center> <img style="width:auto; height:50px;" src="{{ Storage::url($category->icon) }}" /></center>
               
               </span></span></div>
             </div>

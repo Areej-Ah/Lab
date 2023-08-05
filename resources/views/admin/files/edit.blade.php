@@ -66,14 +66,12 @@
 
     <script>
       $('.summernote_description_ar').summernote({
-        placeholder: '{{$serviceFile->description_ar}}',
         tabsize: 2,
         height: 100
       });
     </script>
   <script>
       $('.summernote_description_en').summernote({
-        placeholder: '{{$serviceFile->description_en}}',
         tabsize: 2,
         height: 100
       });

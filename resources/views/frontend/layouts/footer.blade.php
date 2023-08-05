@@ -51,7 +51,7 @@
 	</div>
 </footer>
 </div>
-<a href="#" id="totop">TOP</a>
+<a href="#" id="totop">{!! trans('admin.top') !!}</a>
 
 <script type="text/javascript" src="{{URL::asset('frontend/lab/js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('frontend/lab/js/kl-plugins.js')}}"></script>

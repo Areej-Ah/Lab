@@ -87,7 +87,7 @@
 									</p>
 								</div>
 
-								<a href="#" class="portfolio-item-more-toggle js-toggle-class" data-target=".portfolio-item-desc" data-target-class="is-opened" data-more-text="see more" data-less-text="show less">
+								<a href="#" class="portfolio-item-more-toggle js-toggle-class" data-target=".portfolio-item-desc" data-target-class="is-opened" data-more-text="{!! trans('admin.see_more') !!}" data-less-text="{!! trans('admin.show_less') !!}">
 									<span class="glyphicon glyphicon-menu-down"></span>
 								</a>
 							</div>
@@ -106,7 +106,7 @@
 								</ul>
 							</div>  --}}
 
-							<div class="portfolio-item-otherdetails clearfix">
+							{{--  <div class="portfolio-item-otherdetails clearfix">
 								<div class="portfolio-item-share clearfix" data-share-title="SHARE:">
 									<a href="https://twitter.com/intent/tweet?text=Check+out+-+Progressively+harness&amp;url=http%3A%2F%2Fhogash-demo.com%2Fdemo%2Fkwp%2Fportfolio%2Fprogressively-harness%2F%3Futm_source%3Dsharetw" title="SHARE ON TWITTER" class=" portfolio-item-share-twitter">
 										<span class="icon-twitter"></span>
@@ -125,7 +125,7 @@
 									</a>
 								</div>
 
-							</div>
+							</div>  --}}
 						</div>
 					</div>
 

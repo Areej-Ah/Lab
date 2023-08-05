@@ -18,8 +18,8 @@ class CreateServicesTable extends Migration
             $table->string('name_ar');
             $table->string('name_en');
             $table->string('icon')->nullable();
-            $table->string('description_ar')->nullable();
-            $table->string('description_en')->nullable();
+            $table->longtext('description_ar')->nullable();
+            $table->longtext('description_en')->nullable();
             $table->integer('active')->default(1);
             $table->timestamps();
         });
