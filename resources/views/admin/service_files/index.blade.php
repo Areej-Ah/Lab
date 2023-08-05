@@ -11,7 +11,7 @@
     <!-- /.card-header -->
     <div class="card-body">
 
-    {!! Form::open(['id'=>'form_data','url' => aurl('files/destroy/all'),'method'=>'delete']) !!}
+    {!! Form::open(['id'=>'form_data','url' => aurl('service_files/destroy/all'),'method'=>'delete']) !!}
     {!! $dataTable->table(['class'=>'dataTable table table-bordered table-hover'],true) !!}
     {!! Form::close() !!}
 

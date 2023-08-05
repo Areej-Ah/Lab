@@ -257,25 +257,25 @@
         </ul>
       </li>
 
-      <li class="nav-item has-treeview {{ active_menu('files')[0] }} ">
+      <li class="nav-item has-treeview {{ active_menu('service_files')[0] }} ">
         <a href="#" class="nav-link ">
           <i class="nav-icon fa fa-briefcase"></i>
           <p>
-            {{ trans('admin.files') }}
+            {{ trans('admin.service_files') }}
             <i class="right fas fa-angle-left"></i>
           </p>
         </a>
-        <ul class="nav nav-treeview" style=" {{ active_menu('files')[1] }} ">
+        <ul class="nav nav-treeview" style=" {{ active_menu('service_files')[1] }} ">
 
           <li class="nav-item">
-            <a href="{{aurl('files')}}" class="nav-link">
+            <a href="{{aurl('service_files')}}" class="nav-link">
               <i class="fa fa-briefcase nav-icon"></i>
-              <p>{{ trans('admin.files') }}</p>
+              <p>{{ trans('admin.service_files') }}</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="{{aurl('files/create')}}" class="nav-link">
+            <a href="{{aurl('service_files/create')}}" class="nav-link">
               <i class="fa fa-plus nav-icon"></i>
               <p>{{ trans('admin.add') }}</p>
             </a>

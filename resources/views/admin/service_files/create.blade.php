@@ -10,7 +10,7 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-    {!! Form::open(['url' => aurl('files'),'files'=>true]) !!}
+    {!! Form::open(['url' => aurl('service_files'),'files'=>true]) !!}
 
         <div class="form-group">
             {!! Form::label('title_ar', trans('admin.title_ar')) !!}
@@ -24,13 +24,13 @@
 
 
         <div class="form-group">
-            {!! Form::label('description_ar', trans('admin.description_ar')) !!}
-            {!! Form::textarea('description_ar',old('description_ar'),['class'=>'form-control summernote_description_ar']) !!}
+            {!! Form::label('text_ar', trans('admin.text_ar')) !!}
+            {!! Form::textarea('text_ar',old('text_ar'),['class'=>'form-control summernote_text_ar']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('description_en', trans('admin.description_en')) !!}
-            {!! Form::textarea('description_en',old('description_en'),['class'=>'form-control summernote_description_en']) !!}
+            {!! Form::label('text_en', trans('admin.text_en')) !!}
+            {!! Form::textarea('text_en',old('description_en'),['class'=>'form-control summernote_text_en']) !!}
         </div>
 
         <div class="form-group">
@@ -49,6 +49,12 @@
             </div>
           </div>
         </div>
+
+        <div class="form-group">
+            {!! Form::label('service_name', trans('admin.service_name')) !!}
+            {!! Form::select('service_id',App\Models\Service::pluck('name_'.session('lang'),'id'),old('service_id'),['class'=>'form-control']) !!}
+        </div>
+
 
 
         <br/>
@@ -72,13 +78,13 @@
 
 @section('scripts')
     <script>
-      $('.summernote_description_ar').summernote({
+      $('.summernote_text_ar').summernote({
         tabsize: 2,
         height: 100
       });
     </script>
   <script>
-      $('.summernote_description_en').summernote({
+      $('.summernote_text_en').summernote({
         tabsize: 2,
         height: 100
       });

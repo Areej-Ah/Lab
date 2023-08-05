@@ -21,9 +21,9 @@ class ServiceFileDatatable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('checkbox', 'admin.files.btn.checkbox')
-            ->addColumn('edit', 'admin.files.btn.edit')
-            ->addColumn('delete', 'admin.files.btn.delete')
+            ->addColumn('checkbox', 'admin.service_files.btn.checkbox')
+            ->addColumn('edit', 'admin.service_files.btn.edit')
+            ->addColumn('delete', 'admin.service_files.btn.delete')
             ->rawColumns([
                 'edit',
                 'delete',
